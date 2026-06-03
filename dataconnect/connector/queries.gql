@@ -1,0 +1,37 @@
+# Busca as contas bancárias do usuário logado
+query BuscarContasBancarias($usuarioId: String!) @auth(level: PUBLIC) {
+  contaBancarias(where: { usuarioId: { eq: $usuarioId } }) {
+    id
+    nomeBanco
+    saldo
+    criadoEm
+  }
+}
+
+# Busca as categorias disponíveis
+query BuscarCategorias @auth(level: PUBLIC) {
+  categorias {
+    id
+    nomeCategoria
+  }
+}
+
+# Busca as despesas de um usuário, ordenadas das mais recentes para as mais antigas
+query BuscarDespesas($usuarioId: String!) @auth(level: PUBLIC) {
+  despesas(
+    where: { usuarioId: { eq: $usuarioId } }
+    orderBy: [{ dataDespesa: DESC }]
+  ) {
+    id
+    descricao
+    valor
+    tipo
+    dataDespesa
+    # O GraphQL já faz o JOIN automático (equivalente ao INNER JOIN) para trazer os nomes:
+    contaBancaria { 
+      id
+      nomeBanco 
+    }
+    categoria { nomeCategoria }
+  }
+}

@@ -1,0 +1,7 @@
+connectorId: default
+authMode: PUBLIC
+
+generate:
+  javascriptSdk:
+    outputDir: "../../frontend/src/dataconnect-generated"
+    package: "@my-app/despesas"

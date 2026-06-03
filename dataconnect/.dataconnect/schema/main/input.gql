@@ -1,0 +1,1060 @@
+"""
+✨ `Categoria_KeyOutput` returns the primary key fields of table type `Categoria`.
+
+It has the same format as `Categoria_Key`, but is only used as mutation return value.
+"""
+scalar Categoria_KeyOutput
+"""
+✨ `ContaBancaria_KeyOutput` returns the primary key fields of table type `ContaBancaria`.
+
+It has the same format as `ContaBancaria_Key`, but is only used as mutation return value.
+"""
+scalar ContaBancaria_KeyOutput
+"""
+✨ `Despesa_KeyOutput` returns the primary key fields of table type `Despesa`.
+
+It has the same format as `Despesa_Key`, but is only used as mutation return value.
+"""
+scalar Despesa_KeyOutput
+"""
+✨ `Usuario_KeyOutput` returns the primary key fields of table type `Usuario`.
+
+It has the same format as `Usuario_Key`, but is only used as mutation return value.
+"""
+scalar Usuario_KeyOutput
+"""
+✨ Generated data input type for table 'Categoria'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Categoria_Data {
+  """
+  ✨ Generated from Field `Categoria`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Categoria`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr @fdc_forbiddenInVariables
+  """
+  ✨ Generated from Field `Categoria`.`nomeCategoria` of type `String!`
+  """
+  nomeCategoria: String
+  """
+  ✨ `_expr` server value variant of `nomeCategoria` (✨ Generated from Field `Categoria`.`nomeCategoria` of type `String!`)
+  """
+  nomeCategoria_expr: String_Expr @fdc_forbiddenInVariables
+  """
+  ✨ Generated from Field `Categoria`.`despesas_on_categoria` of type `[Despesa!]!`
+  """
+  despesas_on_categoria: [Despesa_Data!]
+}
+"""
+✨ Generated filter input type for table 'Categoria'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Categoria_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Categoria_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Categoria_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Categoria_Filter!]
+  """
+  ✨ Generated from Field `Categoria`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `Categoria`.`nomeCategoria` of type `String!`
+  """
+  nomeCategoria: String_Filter
+  """
+  ✨ Generated from Field `Categoria`.`despesas_on_categoria` of type `[Despesa!]!`
+  """
+  despesas_on_categoria: Despesa_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'Categoria'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Categoria_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Categoria_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Categoria_Filter
+}
+"""
+✨ Generated having input type for table 'Categoria'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Categoria_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [Categoria_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: Categoria_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [Categoria_Having!]
+  """
+  ✨ Generated from Field `Categoria`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `Categoria`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `Categoria`.`nomeCategoria_count` of type `Int!`
+  """
+  nomeCategoria_count: Int_Filter
+}
+"""
+✨ Generated key input type for table 'Categoria'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Categoria_Key {
+  """
+  ✨ Generated from Field `Categoria`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Categoria`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr @fdc_forbiddenInVariables
+}
+"""
+✨ Generated list filter input type for table 'Categoria'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Categoria_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Categoria_Filter
+}
+"""
+✨ Generated order input type for table 'Categoria'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Categoria_Order {
+  """
+  ✨ Generated from Field `Categoria`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `Categoria`.`nomeCategoria` of type `String!`
+  """
+  nomeCategoria: OrderDirection
+  """
+  ✨ Generated from Field `Categoria`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `Categoria`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `Categoria`.`nomeCategoria_count` of type `Int!`
+  """
+  nomeCategoria_count: OrderDirection
+}
+"""
+✨ Generated data input type for table 'ContaBancaria'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input ContaBancaria_Data {
+  """
+  ✨ Generated from Field `ContaBancaria`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `ContaBancaria`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr @fdc_forbiddenInVariables
+  """
+  ✨ Generated from Field `ContaBancaria`.`usuarioId` of type `String!`
+  """
+  usuarioId: String
+  """
+  ✨ `_expr` server value variant of `usuarioId` (✨ Generated from Field `ContaBancaria`.`usuarioId` of type `String!`)
+  """
+  usuarioId_expr: String_Expr @fdc_forbiddenInVariables
+  """
+  ✨ Generated from Field `ContaBancaria`.`usuario` of type `Usuario!`
+  """
+  usuario: Usuario_Key @fdc_forbiddenInVariables
+  """
+  ✨ Generated from Field `ContaBancaria`.`criadoEm` of type `Date!`
+  """
+  criadoEm: Date
+  """
+  ✨ `_date` server value variant of `criadoEm` (✨ Generated from Field `ContaBancaria`.`criadoEm` of type `Date!`)
+  """
+  criadoEm_date: Date_Relative @fdc_forbiddenInVariables
+  """
+  ✨ `_expr` server value variant of `criadoEm` (✨ Generated from Field `ContaBancaria`.`criadoEm` of type `Date!`)
+  """
+  criadoEm_expr: Date_Expr @fdc_forbiddenInVariables
+  """
+  ✨ `_update` server value variant of `criadoEm` (✨ Generated from Field `ContaBancaria`.`criadoEm` of type `Date!`)
+  """
+  criadoEm_update: [Date_Update!] @fdc_forbiddenInVariables
+  """
+  ✨ Generated from Field `ContaBancaria`.`nomeBanco` of type `String!`
+  """
+  nomeBanco: String
+  """
+  ✨ `_expr` server value variant of `nomeBanco` (✨ Generated from Field `ContaBancaria`.`nomeBanco` of type `String!`)
+  """
+  nomeBanco_expr: String_Expr @fdc_forbiddenInVariables
+  """
+  ✨ Generated from Field `ContaBancaria`.`saldo` of type `Float!`
+  """
+  saldo: Float
+  """
+  ✨ `_expr` server value variant of `saldo` (✨ Generated from Field `ContaBancaria`.`saldo` of type `Float!`)
+  """
+  saldo_expr: Float_Expr @fdc_forbiddenInVariables
+  """
+  ✨ `_update` server value variant of `saldo` (✨ Generated from Field `ContaBancaria`.`saldo` of type `Float!`)
+  """
+  saldo_update: [Float_Update!] @fdc_forbiddenInVariables
+  """
+  ✨ Generated from Field `ContaBancaria`.`despesas_on_contaBancaria` of type `[Despesa!]!`
+  """
+  despesas_on_contaBancaria: [Despesa_Data!]
+}
+"""
+✨ Generated filter input type for table 'ContaBancaria'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input ContaBancaria_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [ContaBancaria_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: ContaBancaria_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [ContaBancaria_Filter!]
+  """
+  ✨ Generated from Field `ContaBancaria`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `ContaBancaria`.`usuarioId` of type `String!`
+  """
+  usuarioId: String_Filter
+  """
+  ✨ Generated from Field `ContaBancaria`.`usuario` of type `Usuario!`
+  """
+  usuario: Usuario_Filter
+  """
+  ✨ Generated from Field `ContaBancaria`.`criadoEm` of type `Date!`
+  """
+  criadoEm: Date_Filter
+  """
+  ✨ Generated from Field `ContaBancaria`.`nomeBanco` of type `String!`
+  """
+  nomeBanco: String_Filter
+  """
+  ✨ Generated from Field `ContaBancaria`.`saldo` of type `Float!`
+  """
+  saldo: Float_Filter
+  """
+  ✨ Generated from Field `ContaBancaria`.`despesas_on_contaBancaria` of type `[Despesa!]!`
+  """
+  despesas_on_contaBancaria: Despesa_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'ContaBancaria'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input ContaBancaria_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [ContaBancaria_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: ContaBancaria_Filter
+}
+"""
+✨ Generated having input type for table 'ContaBancaria'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input ContaBancaria_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [ContaBancaria_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: ContaBancaria_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [ContaBancaria_Having!]
+  """
+  ✨ Generated from Field `ContaBancaria`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `ContaBancaria`.`criadoEm_count` of type `Int!`
+  """
+  criadoEm_count: Int_Filter
+  """
+  ✨ Generated from Field `ContaBancaria`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `ContaBancaria`.`nomeBanco_count` of type `Int!`
+  """
+  nomeBanco_count: Int_Filter
+  """
+  ✨ Generated from Field `ContaBancaria`.`saldo_count` of type `Int!`
+  """
+  saldo_count: Int_Filter
+  """
+  ✨ Generated from Field `ContaBancaria`.`usuarioId_count` of type `Int!`
+  """
+  usuarioId_count: Int_Filter
+  """
+  ✨ Generated from Field `ContaBancaria`.`saldo_sum` of type `Float`
+  """
+  saldo_sum: Float_Filter
+  """
+  ✨ Generated from Field `ContaBancaria`.`saldo_avg` of type `Float`
+  """
+  saldo_avg: Float_Filter
+  """
+  ✨ Generated from Field `ContaBancaria`.`criadoEm_min` of type `Date`
+  """
+  criadoEm_min: Date_Filter
+  """
+  ✨ Generated from Field `ContaBancaria`.`saldo_min` of type `Float`
+  """
+  saldo_min: Float_Filter
+  """
+  ✨ Generated from Field `ContaBancaria`.`criadoEm_max` of type `Date`
+  """
+  criadoEm_max: Date_Filter
+  """
+  ✨ Generated from Field `ContaBancaria`.`saldo_max` of type `Float`
+  """
+  saldo_max: Float_Filter
+}
+"""
+✨ Generated key input type for table 'ContaBancaria'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input ContaBancaria_Key {
+  """
+  ✨ Generated from Field `ContaBancaria`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `ContaBancaria`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr @fdc_forbiddenInVariables
+}
+"""
+✨ Generated list filter input type for table 'ContaBancaria'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input ContaBancaria_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: ContaBancaria_Filter
+}
+"""
+✨ Generated order input type for table 'ContaBancaria'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input ContaBancaria_Order {
+  """
+  ✨ Generated from Field `ContaBancaria`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `ContaBancaria`.`usuarioId` of type `String!`
+  """
+  usuarioId: OrderDirection
+  """
+  ✨ Generated from Field `ContaBancaria`.`usuario` of type `Usuario!`
+  """
+  usuario: Usuario_Order
+  """
+  ✨ Generated from Field `ContaBancaria`.`criadoEm` of type `Date!`
+  """
+  criadoEm: OrderDirection
+  """
+  ✨ Generated from Field `ContaBancaria`.`nomeBanco` of type `String!`
+  """
+  nomeBanco: OrderDirection
+  """
+  ✨ Generated from Field `ContaBancaria`.`saldo` of type `Float!`
+  """
+  saldo: OrderDirection
+  """
+  ✨ Generated from Field `ContaBancaria`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `ContaBancaria`.`criadoEm_count` of type `Int!`
+  """
+  criadoEm_count: OrderDirection
+  """
+  ✨ Generated from Field `ContaBancaria`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `ContaBancaria`.`nomeBanco_count` of type `Int!`
+  """
+  nomeBanco_count: OrderDirection
+  """
+  ✨ Generated from Field `ContaBancaria`.`saldo_count` of type `Int!`
+  """
+  saldo_count: OrderDirection
+  """
+  ✨ Generated from Field `ContaBancaria`.`usuarioId_count` of type `Int!`
+  """
+  usuarioId_count: OrderDirection
+  """
+  ✨ Generated from Field `ContaBancaria`.`saldo_sum` of type `Float`
+  """
+  saldo_sum: OrderDirection
+  """
+  ✨ Generated from Field `ContaBancaria`.`saldo_avg` of type `Float`
+  """
+  saldo_avg: OrderDirection
+  """
+  ✨ Generated from Field `ContaBancaria`.`criadoEm_min` of type `Date`
+  """
+  criadoEm_min: OrderDirection
+  """
+  ✨ Generated from Field `ContaBancaria`.`saldo_min` of type `Float`
+  """
+  saldo_min: OrderDirection
+  """
+  ✨ Generated from Field `ContaBancaria`.`criadoEm_max` of type `Date`
+  """
+  criadoEm_max: OrderDirection
+  """
+  ✨ Generated from Field `ContaBancaria`.`saldo_max` of type `Float`
+  """
+  saldo_max: OrderDirection
+}
+"""
+✨ Generated data input type for table 'Despesa'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Despesa_Data {
+  """
+  ✨ Generated from Field `Despesa`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Despesa`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr @fdc_forbiddenInVariables
+  """
+  ✨ Generated from Field `Despesa`.`categoriaId` of type `UUID!`
+  """
+  categoriaId: UUID
+  """
+  ✨ `_expr` server value variant of `categoriaId` (✨ Generated from Field `Despesa`.`categoriaId` of type `UUID!`)
+  """
+  categoriaId_expr: UUID_Expr @fdc_forbiddenInVariables
+  """
+  ✨ Generated from Field `Despesa`.`contaBancariaId` of type `UUID!`
+  """
+  contaBancariaId: UUID
+  """
+  ✨ `_expr` server value variant of `contaBancariaId` (✨ Generated from Field `Despesa`.`contaBancariaId` of type `UUID!`)
+  """
+  contaBancariaId_expr: UUID_Expr @fdc_forbiddenInVariables
+  """
+  ✨ Generated from Field `Despesa`.`usuarioId` of type `String!`
+  """
+  usuarioId: String
+  """
+  ✨ `_expr` server value variant of `usuarioId` (✨ Generated from Field `Despesa`.`usuarioId` of type `String!`)
+  """
+  usuarioId_expr: String_Expr @fdc_forbiddenInVariables
+  """
+  ✨ Generated from Field `Despesa`.`categoria` of type `Categoria!`
+  """
+  categoria: Categoria_Key @fdc_forbiddenInVariables
+  """
+  ✨ Generated from Field `Despesa`.`contaBancaria` of type `ContaBancaria!`
+  """
+  contaBancaria: ContaBancaria_Key @fdc_forbiddenInVariables
+  """
+  ✨ Generated from Field `Despesa`.`usuario` of type `Usuario!`
+  """
+  usuario: Usuario_Key @fdc_forbiddenInVariables
+  """
+  ✨ Generated from Field `Despesa`.`dataDespesa` of type `Date!`
+  """
+  dataDespesa: Date
+  """
+  ✨ `_date` server value variant of `dataDespesa` (✨ Generated from Field `Despesa`.`dataDespesa` of type `Date!`)
+  """
+  dataDespesa_date: Date_Relative @fdc_forbiddenInVariables
+  """
+  ✨ `_expr` server value variant of `dataDespesa` (✨ Generated from Field `Despesa`.`dataDespesa` of type `Date!`)
+  """
+  dataDespesa_expr: Date_Expr @fdc_forbiddenInVariables
+  """
+  ✨ `_update` server value variant of `dataDespesa` (✨ Generated from Field `Despesa`.`dataDespesa` of type `Date!`)
+  """
+  dataDespesa_update: [Date_Update!] @fdc_forbiddenInVariables
+  """
+  ✨ Generated from Field `Despesa`.`descricao` of type `String!`
+  """
+  descricao: String
+  """
+  ✨ `_expr` server value variant of `descricao` (✨ Generated from Field `Despesa`.`descricao` of type `String!`)
+  """
+  descricao_expr: String_Expr @fdc_forbiddenInVariables
+  """
+  ✨ Generated from Field `Despesa`.`tipo` of type `String!`
+  """
+  tipo: String
+  """
+  ✨ `_expr` server value variant of `tipo` (✨ Generated from Field `Despesa`.`tipo` of type `String!`)
+  """
+  tipo_expr: String_Expr @fdc_forbiddenInVariables
+  """
+  ✨ Generated from Field `Despesa`.`valor` of type `Float!`
+  """
+  valor: Float
+  """
+  ✨ `_expr` server value variant of `valor` (✨ Generated from Field `Despesa`.`valor` of type `Float!`)
+  """
+  valor_expr: Float_Expr @fdc_forbiddenInVariables
+  """
+  ✨ `_update` server value variant of `valor` (✨ Generated from Field `Despesa`.`valor` of type `Float!`)
+  """
+  valor_update: [Float_Update!] @fdc_forbiddenInVariables
+}
+"""
+✨ Generated filter input type for table 'Despesa'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Despesa_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Despesa_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Despesa_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Despesa_Filter!]
+  """
+  ✨ Generated from Field `Despesa`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `Despesa`.`categoriaId` of type `UUID!`
+  """
+  categoriaId: UUID_Filter
+  """
+  ✨ Generated from Field `Despesa`.`contaBancariaId` of type `UUID!`
+  """
+  contaBancariaId: UUID_Filter
+  """
+  ✨ Generated from Field `Despesa`.`usuarioId` of type `String!`
+  """
+  usuarioId: String_Filter
+  """
+  ✨ Generated from Field `Despesa`.`categoria` of type `Categoria!`
+  """
+  categoria: Categoria_Filter
+  """
+  ✨ Generated from Field `Despesa`.`contaBancaria` of type `ContaBancaria!`
+  """
+  contaBancaria: ContaBancaria_Filter
+  """
+  ✨ Generated from Field `Despesa`.`usuario` of type `Usuario!`
+  """
+  usuario: Usuario_Filter
+  """
+  ✨ Generated from Field `Despesa`.`dataDespesa` of type `Date!`
+  """
+  dataDespesa: Date_Filter
+  """
+  ✨ Generated from Field `Despesa`.`descricao` of type `String!`
+  """
+  descricao: String_Filter
+  """
+  ✨ Generated from Field `Despesa`.`tipo` of type `String!`
+  """
+  tipo: String_Filter
+  """
+  ✨ Generated from Field `Despesa`.`valor` of type `Float!`
+  """
+  valor: Float_Filter
+}
+"""
+✨ Generated first-row input type for table 'Despesa'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Despesa_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Despesa_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Despesa_Filter
+}
+"""
+✨ Generated having input type for table 'Despesa'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Despesa_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [Despesa_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: Despesa_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [Despesa_Having!]
+  """
+  ✨ Generated from Field `Despesa`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `Despesa`.`categoriaId_count` of type `Int!`
+  """
+  categoriaId_count: Int_Filter
+  """
+  ✨ Generated from Field `Despesa`.`contaBancariaId_count` of type `Int!`
+  """
+  contaBancariaId_count: Int_Filter
+  """
+  ✨ Generated from Field `Despesa`.`dataDespesa_count` of type `Int!`
+  """
+  dataDespesa_count: Int_Filter
+  """
+  ✨ Generated from Field `Despesa`.`descricao_count` of type `Int!`
+  """
+  descricao_count: Int_Filter
+  """
+  ✨ Generated from Field `Despesa`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `Despesa`.`tipo_count` of type `Int!`
+  """
+  tipo_count: Int_Filter
+  """
+  ✨ Generated from Field `Despesa`.`usuarioId_count` of type `Int!`
+  """
+  usuarioId_count: Int_Filter
+  """
+  ✨ Generated from Field `Despesa`.`valor_count` of type `Int!`
+  """
+  valor_count: Int_Filter
+  """
+  ✨ Generated from Field `Despesa`.`valor_sum` of type `Float`
+  """
+  valor_sum: Float_Filter
+  """
+  ✨ Generated from Field `Despesa`.`valor_avg` of type `Float`
+  """
+  valor_avg: Float_Filter
+  """
+  ✨ Generated from Field `Despesa`.`dataDespesa_min` of type `Date`
+  """
+  dataDespesa_min: Date_Filter
+  """
+  ✨ Generated from Field `Despesa`.`valor_min` of type `Float`
+  """
+  valor_min: Float_Filter
+  """
+  ✨ Generated from Field `Despesa`.`dataDespesa_max` of type `Date`
+  """
+  dataDespesa_max: Date_Filter
+  """
+  ✨ Generated from Field `Despesa`.`valor_max` of type `Float`
+  """
+  valor_max: Float_Filter
+}
+"""
+✨ Generated key input type for table 'Despesa'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Despesa_Key {
+  """
+  ✨ Generated from Field `Despesa`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Despesa`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr @fdc_forbiddenInVariables
+}
+"""
+✨ Generated list filter input type for table 'Despesa'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Despesa_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Despesa_Filter
+}
+"""
+✨ Generated order input type for table 'Despesa'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Despesa_Order {
+  """
+  ✨ Generated from Field `Despesa`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `Despesa`.`categoriaId` of type `UUID!`
+  """
+  categoriaId: OrderDirection
+  """
+  ✨ Generated from Field `Despesa`.`contaBancariaId` of type `UUID!`
+  """
+  contaBancariaId: OrderDirection
+  """
+  ✨ Generated from Field `Despesa`.`usuarioId` of type `String!`
+  """
+  usuarioId: OrderDirection
+  """
+  ✨ Generated from Field `Despesa`.`categoria` of type `Categoria!`
+  """
+  categoria: Categoria_Order
+  """
+  ✨ Generated from Field `Despesa`.`contaBancaria` of type `ContaBancaria!`
+  """
+  contaBancaria: ContaBancaria_Order
+  """
+  ✨ Generated from Field `Despesa`.`usuario` of type `Usuario!`
+  """
+  usuario: Usuario_Order
+  """
+  ✨ Generated from Field `Despesa`.`dataDespesa` of type `Date!`
+  """
+  dataDespesa: OrderDirection
+  """
+  ✨ Generated from Field `Despesa`.`descricao` of type `String!`
+  """
+  descricao: OrderDirection
+  """
+  ✨ Generated from Field `Despesa`.`tipo` of type `String!`
+  """
+  tipo: OrderDirection
+  """
+  ✨ Generated from Field `Despesa`.`valor` of type `Float!`
+  """
+  valor: OrderDirection
+  """
+  ✨ Generated from Field `Despesa`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `Despesa`.`categoriaId_count` of type `Int!`
+  """
+  categoriaId_count: OrderDirection
+  """
+  ✨ Generated from Field `Despesa`.`contaBancariaId_count` of type `Int!`
+  """
+  contaBancariaId_count: OrderDirection
+  """
+  ✨ Generated from Field `Despesa`.`dataDespesa_count` of type `Int!`
+  """
+  dataDespesa_count: OrderDirection
+  """
+  ✨ Generated from Field `Despesa`.`descricao_count` of type `Int!`
+  """
+  descricao_count: OrderDirection
+  """
+  ✨ Generated from Field `Despesa`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `Despesa`.`tipo_count` of type `Int!`
+  """
+  tipo_count: OrderDirection
+  """
+  ✨ Generated from Field `Despesa`.`usuarioId_count` of type `Int!`
+  """
+  usuarioId_count: OrderDirection
+  """
+  ✨ Generated from Field `Despesa`.`valor_count` of type `Int!`
+  """
+  valor_count: OrderDirection
+  """
+  ✨ Generated from Field `Despesa`.`valor_sum` of type `Float`
+  """
+  valor_sum: OrderDirection
+  """
+  ✨ Generated from Field `Despesa`.`valor_avg` of type `Float`
+  """
+  valor_avg: OrderDirection
+  """
+  ✨ Generated from Field `Despesa`.`dataDespesa_min` of type `Date`
+  """
+  dataDespesa_min: OrderDirection
+  """
+  ✨ Generated from Field `Despesa`.`valor_min` of type `Float`
+  """
+  valor_min: OrderDirection
+  """
+  ✨ Generated from Field `Despesa`.`dataDespesa_max` of type `Date`
+  """
+  dataDespesa_max: OrderDirection
+  """
+  ✨ Generated from Field `Despesa`.`valor_max` of type `Float`
+  """
+  valor_max: OrderDirection
+}
+"""
+✨ Generated data input type for table 'Usuario'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Usuario_Data {
+  """
+  ✨ Generated from Field `Usuario`.`id` of type `String!`
+  """
+  id: String
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Usuario`.`id` of type `String!`)
+  """
+  id_expr: String_Expr @fdc_forbiddenInVariables
+  """
+  ✨ Generated from Field `Usuario`.`dataCadastro` of type `Date!`
+  """
+  dataCadastro: Date
+  """
+  ✨ `_date` server value variant of `dataCadastro` (✨ Generated from Field `Usuario`.`dataCadastro` of type `Date!`)
+  """
+  dataCadastro_date: Date_Relative @fdc_forbiddenInVariables
+  """
+  ✨ `_expr` server value variant of `dataCadastro` (✨ Generated from Field `Usuario`.`dataCadastro` of type `Date!`)
+  """
+  dataCadastro_expr: Date_Expr @fdc_forbiddenInVariables
+  """
+  ✨ `_update` server value variant of `dataCadastro` (✨ Generated from Field `Usuario`.`dataCadastro` of type `Date!`)
+  """
+  dataCadastro_update: [Date_Update!] @fdc_forbiddenInVariables
+  """
+  ✨ Generated from Field `Usuario`.`email` of type `String!`
+  """
+  email: String
+  """
+  ✨ `_expr` server value variant of `email` (✨ Generated from Field `Usuario`.`email` of type `String!`)
+  """
+  email_expr: String_Expr @fdc_forbiddenInVariables
+  """
+  ✨ Generated from Field `Usuario`.`contaBancarias_on_usuario` of type `[ContaBancaria!]!`
+  """
+  contaBancarias_on_usuario: [ContaBancaria_Data!]
+  """
+  ✨ Generated from Field `Usuario`.`despesas_on_usuario` of type `[Despesa!]!`
+  """
+  despesas_on_usuario: [Despesa_Data!]
+}
+"""
+✨ Generated filter input type for table 'Usuario'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Usuario_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Usuario_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Usuario_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Usuario_Filter!]
+  """
+  ✨ Generated from Field `Usuario`.`id` of type `String!`
+  """
+  id: String_Filter
+  """
+  ✨ Generated from Field `Usuario`.`dataCadastro` of type `Date!`
+  """
+  dataCadastro: Date_Filter
+  """
+  ✨ Generated from Field `Usuario`.`email` of type `String!`
+  """
+  email: String_Filter
+  """
+  ✨ Generated from Field `Usuario`.`contaBancarias_on_usuario` of type `[ContaBancaria!]!`
+  """
+  contaBancarias_on_usuario: ContaBancaria_ListFilter
+  """
+  ✨ Generated from Field `Usuario`.`despesas_on_usuario` of type `[Despesa!]!`
+  """
+  despesas_on_usuario: Despesa_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'Usuario'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Usuario_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Usuario_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Usuario_Filter
+}
+"""
+✨ Generated having input type for table 'Usuario'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Usuario_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [Usuario_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: Usuario_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [Usuario_Having!]
+  """
+  ✨ Generated from Field `Usuario`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `Usuario`.`dataCadastro_count` of type `Int!`
+  """
+  dataCadastro_count: Int_Filter
+  """
+  ✨ Generated from Field `Usuario`.`email_count` of type `Int!`
+  """
+  email_count: Int_Filter
+  """
+  ✨ Generated from Field `Usuario`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `Usuario`.`dataCadastro_min` of type `Date`
+  """
+  dataCadastro_min: Date_Filter
+  """
+  ✨ Generated from Field `Usuario`.`dataCadastro_max` of type `Date`
+  """
+  dataCadastro_max: Date_Filter
+}
+"""
+✨ Generated key input type for table 'Usuario'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Usuario_Key {
+  """
+  ✨ Generated from Field `Usuario`.`id` of type `String!`
+  """
+  id: String
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Usuario`.`id` of type `String!`)
+  """
+  id_expr: String_Expr @fdc_forbiddenInVariables
+}
+"""
+✨ Generated list filter input type for table 'Usuario'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Usuario_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Usuario_Filter
+}
+"""
+✨ Generated order input type for table 'Usuario'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Usuario_Order {
+  """
+  ✨ Generated from Field `Usuario`.`id` of type `String!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `Usuario`.`dataCadastro` of type `Date!`
+  """
+  dataCadastro: OrderDirection
+  """
+  ✨ Generated from Field `Usuario`.`email` of type `String!`
+  """
+  email: OrderDirection
+  """
+  ✨ Generated from Field `Usuario`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `Usuario`.`dataCadastro_count` of type `Int!`
+  """
+  dataCadastro_count: OrderDirection
+  """
+  ✨ Generated from Field `Usuario`.`email_count` of type `Int!`
+  """
+  email_count: OrderDirection
+  """
+  ✨ Generated from Field `Usuario`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `Usuario`.`dataCadastro_min` of type `Date`
+  """
+  dataCadastro_min: OrderDirection
+  """
+  ✨ Generated from Field `Usuario`.`dataCadastro_max` of type `Date`
+  """
+  dataCadastro_max: OrderDirection
+}

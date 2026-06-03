@@ -1,0 +1,20 @@
+extend type ContaBancaria {
+  """
+  ✨ Implicit foreign key field based on `ContaBancaria`.`usuario`. It must match the value of `Usuario`.`id`. See `@ref` for how to customize it.
+  """
+  usuarioId: String! @fdc_generated(from: "ContaBancaria.usuario", purpose: IMPLICIT_REF_FIELD)
+}
+extend type Despesa {
+  """
+  ✨ Implicit foreign key field based on `Despesa`.`categoria`. It must match the value of `Categoria`.`id`. See `@ref` for how to customize it.
+  """
+  categoriaId: UUID! @fdc_generated(from: "Despesa.categoria", purpose: IMPLICIT_REF_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Despesa`.`contaBancaria`. It must match the value of `ContaBancaria`.`id`. See `@ref` for how to customize it.
+  """
+  contaBancariaId: UUID! @fdc_generated(from: "Despesa.contaBancaria", purpose: IMPLICIT_REF_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Despesa`.`usuario`. It must match the value of `Usuario`.`id`. See `@ref` for how to customize it.
+  """
+  usuarioId: String! @fdc_generated(from: "Despesa.usuario", purpose: IMPLICIT_REF_FIELD)
+}

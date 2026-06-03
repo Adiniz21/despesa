@@ -1,0 +1,56 @@
+# Mutation para criar um usuário de teste
+mutation CriarUsuario($id: String!, $email: String!) @auth(level: PUBLIC) {
+  usuario_insert(data: { id: $id, email: $email })
+}
+
+# Mutation para criar uma Categoria genérica
+mutation CriarCategoria($nomeCategoria: String!) @auth(level: PUBLIC) {
+  categoria_insert(data: { nomeCategoria: $nomeCategoria })
+}
+
+# Essa mutation será transformada em uma função para o seu Front-end (React) chamar
+mutation CriarContaBancaria($usuarioId: String!, $nomeBanco: String!, $saldoInicial: Float!) @auth(level: PUBLIC) {
+  contaBancaria_insert(
+    data: {
+      usuarioId: $usuarioId,
+      nomeBanco: $nomeBanco,
+      saldo: $saldoInicial
+    }
+  )
+}
+
+# Mutation para registrar despesa e atualizar saldo simultaneamente (Transação)
+mutation RegistrarDespesa(
+  $usuarioId: String!
+  $contaBancariaId: UUID!
+  $categoriaId: UUID!
+  $descricao: String!
+  $valor: Float!
+  $novoSaldo: Float!
+  $tipo: String!
+) @auth(level: PUBLIC) {
+  
+  # 1. Cria o registro da despesa
+  despesa_insert(data: {
+    usuarioId: $usuarioId
+    contaBancariaId: $contaBancariaId
+    categoriaId: $categoriaId
+    descricao: $descricao
+    valor: $valor
+    tipo: $tipo
+  })
+
+  # 2. Atualiza o saldo na conta bancária
+  contaBancaria_update(id: $contaBancariaId, data: { saldo: $novoSaldo })
+}
+
+# Mutation para excluir uma conta (o Postgres apagará as despesas dela em cascata)
+mutation ExcluirConta($id: UUID!) @auth(level: PUBLIC) {
+  contaBancaria_delete(id: $id)
+}
+
+# Mutation para excluir transação e reverter saldo
+mutation ExcluirDespesa($despesaId: UUID!, $contaBancariaId: UUID!, $novoSaldo: Float!) @auth(level: PUBLIC) {
+  despesa_delete(id: $despesaId)
+  contaBancaria_update(id: $contaBancariaId, data: { saldo: $novoSaldo })
+}

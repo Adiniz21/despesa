@@ -1,0 +1,219 @@
+extend type Query {
+  """
+  ✨ Look up a single `Categoria` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  categoria(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Categoria_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Categoria_FirstRow
+  ): Categoria @fdc_generated(from: "Categoria", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `ContaBancaria` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  contaBancaria(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: ContaBancaria_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: ContaBancaria_FirstRow
+  ): ContaBancaria @fdc_generated(from: "ContaBancaria", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `Despesa` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  despesa(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Despesa_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Despesa_FirstRow
+  ): Despesa @fdc_generated(from: "Despesa", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `Usuario` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  usuario(
+    """
+    The unique ID of the object.
+    """
+    id: String
+
+    """
+    ✨ `_expr` server value variant of `id` (The unique ID of the object.)
+    """
+    id_expr: String_Expr
+
+    """
+    The key used to identify the object.
+    """
+    key: Usuario_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Usuario_FirstRow
+  ): Usuario @fdc_generated(from: "Usuario", purpose: QUERY_SINGLE)
+  """
+  ✨ List `Categoria` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  categorias(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Categoria_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Categoria_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: Categoria_Having
+  ): [Categoria!]! @fdc_generated(from: "Categoria", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `ContaBancaria` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  contaBancarias(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: ContaBancaria_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [ContaBancaria_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: ContaBancaria_Having
+  ): [ContaBancaria!]! @fdc_generated(from: "ContaBancaria", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `Despesa` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  despesas(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Despesa_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Despesa_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: Despesa_Having
+  ): [Despesa!]! @fdc_generated(from: "Despesa", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `Usuario` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  usuarios(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Usuario_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Usuario_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: Usuario_Having
+  ): [Usuario!]! @fdc_generated(from: "Usuario", purpose: QUERY_MULTIPLE)
+}

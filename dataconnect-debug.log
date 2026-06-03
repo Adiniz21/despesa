@@ -1,0 +1,361 @@
+I0601 16:31:26.090024   25376 load.go:31] Reloading schema and connectors...
+I0601 16:31:26.105349   25376 control.go:100] [projects/emulator/locations/emulator/services/despesa 91cd] UpdateResources(): done
+Main schema: sources: schema\schema.gql [868B] 
+Connector "default": sources: connector\mutations.gql [1556B] connector\queries.gql [851B] 
+I0601 16:31:26.112591   25376 codegen.go:101] [connector "default" javascriptSdk] Generating sources into "C:\\Users\\artur\\OneDrive\\Documentos\\projetos\\despesa\\frontend\\src\\dataconnect-generated"
+I0601 16:31:26.118614   25376 collector.go:107] schema extensions wrote into "C:\\Users\\artur\\OneDrive\\Documentos\\projetos\\despesa\\dataconnect\\.dataconnect\\schema"
+Generated sources: main\relation.gql [14421B] prelude.gql [84995B] main\query.gql [5266B] main\mutation.gql [14165B] main\implicit.gql [1070B] main\input.gql [31550B] 
+I0601 16:31:26.122613   25376 collector.go:107] connector "default" javascriptSdk wrote into "C:\\Users\\artur\\OneDrive\\Documentos\\projetos\\despesa\\frontend\\src\\dataconnect-generated"
+Generated sources: package.json [609B] README.md [40724B] .guides/setup.md [578B] esm\index.esm.js [4781B] esm\package.json [17B] .guides/usage.md [1839B] .guides/config.json [236B] index.d.ts [8141B] index.cjs.js [5326B] 
+I0601 16:31:26.122613   25376 installsdk.go:138] generate.javascriptSdk.packageJsonDir is not specified, skipping automatic installation of package
+I0601 16:31:26.122613   25376 load.go:109] Finished reloading
+I0601 16:31:26.123610   25376 dev.go:104] Listening on address (HTTP + gRPC): 127.0.0.1:9399
+I0601 16:31:26.123610   25376 dev.go:104] Listening on address (HTTP + gRPC): [::1]:9399
+I0601 16:31:28.690558   25376 control.go:100] [projects/emulator/locations/emulator/services/despesa 24dc] UpdateResources(): done
+Main schema: sources: schema\schema.gql [868B] 
+Connector "default": sources: connector\mutations.gql [1556B] connector\queries.gql [851B] 
+I0601 16:31:28.694249   25376 configure_emulator.go:21] ConfigureEmulator successed
+Request: service_id:  "despesa"
+connection_string:  "postgres://127.0.0.1:5432/fdcdb?sslmode=disable"
+database:  "fdcdb"
+
+Response: 
+I0601 16:32:34.004534   25376 execute.go:57] Database ping is quick (likely cached), took 1.0327ms
+W0601 16:32:34.011330   25376 engine.go:213] [projects/emulator/locations/emulator/services/despesa 24dc] ExecuteMutation mutation CriarUsuario: failed. Connector: default
+Auth: user of {"UID":"tuP29PTczmOizLSRnGE4r849dpj2","Token":{"aud":"to-do-list-artur","auth_time":1780319778,"email":"arturdlmeira@gmail.com","email_verified":true,"exp":1780343913,"firebase":{"identities":{"email":["arturdlmeira@gmail.com"],"google.com":["103614178496860493664"]},"sign_in_provider":"google.com"},"iat":1780340313,"iss":"https://securetoken.google.com/to-do-list-artur","name":"Artur Diniz","picture":"https://lh3.googleusercontent.com/a/ACg8ocLA2Q6ZufixICd6pmX4rO03gTgW-xSKtpjSEPpKcfs5Fmu_NsxluQ=s96-c","sub":"tuP29PTczmOizLSRnGE4r849dpj2","user_id":"tuP29PTczmOizLSRnGE4r849dpj2"}}
+
+Variables Set: [email id]
+Errors: [message:"violates SQL unique constraint: usuario_pkey"  path:{values:{string_value:"usuario_insert"}}  extensions:{code:ALREADY_EXISTS  debug_details:"PostgreSQL runtime error (err_code: 23505): pq: duplicate key value violates unique constraint \"usuario_pkey\"\nWITH \"usuario_insert_temp\" AS (INSERT INTO \"public\".\"usuario\" (\"email\",\"id\",\"data_cadastro\") VALUES ( $1 ::text, $2 ::text, $3 ::date) RETURNING jsonb_build_object('id', \"id\") AS j) SELECT * FROM \"usuario_insert_temp\"\nParams: [arturdlmeira@gmail.com tuP29PTczmOizLSRnGE4r849dpj2 2026-06-01]"}]
+Data Fields: [usuario_insert]
+sources: connector\mutations.gql [1556B] connector\queries.gql [851B] 
+I0601 16:32:34.012117   25376 execute.go:57] Database ping is quick (likely cached), took 0s
+I0601 16:32:34.016328   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 24dc] ExecuteQuery query BuscarContasBancarias: succeeded. Connector: default
+I0601 16:32:34.016836   25376 execute.go:57] Database ping is quick (likely cached), took 507.9µs
+I0601 16:32:34.017973   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 24dc] ExecuteQuery query BuscarCategorias: succeeded. Connector: default
+I0601 16:32:34.689910   25376 execute.go:57] Database ping is quick (likely cached), took 529.5µs
+W0601 16:32:34.692049   25376 engine.go:213] [projects/emulator/locations/emulator/services/despesa 24dc] ExecuteMutation mutation CriarUsuario: failed. Connector: default
+Auth: user of {"UID":"tuP29PTczmOizLSRnGE4r849dpj2","Token":{"aud":"to-do-list-artur","auth_time":1780319778,"email":"arturdlmeira@gmail.com","email_verified":true,"exp":1780343913,"firebase":{"identities":{"email":["arturdlmeira@gmail.com"],"google.com":["103614178496860493664"]},"sign_in_provider":"google.com"},"iat":1780340313,"iss":"https://securetoken.google.com/to-do-list-artur","name":"Artur Diniz","picture":"https://lh3.googleusercontent.com/a/ACg8ocLA2Q6ZufixICd6pmX4rO03gTgW-xSKtpjSEPpKcfs5Fmu_NsxluQ=s96-c","sub":"tuP29PTczmOizLSRnGE4r849dpj2","user_id":"tuP29PTczmOizLSRnGE4r849dpj2"}}
+
+Variables Set: [email id]
+Errors: [message:"violates SQL unique constraint: usuario_pkey"  path:{values:{string_value:"usuario_insert"}}  extensions:{code:ALREADY_EXISTS  debug_details:"PostgreSQL runtime error (err_code: 23505): pq: duplicate key value violates unique constraint \"usuario_pkey\"\nWITH \"usuario_insert_temp\" AS (INSERT INTO \"public\".\"usuario\" (\"email\",\"id\",\"data_cadastro\") VALUES ( $1 ::text, $2 ::text, $3 ::date) RETURNING jsonb_build_object('id', \"id\") AS j) SELECT * FROM \"usuario_insert_temp\"\nParams: [arturdlmeira@gmail.com tuP29PTczmOizLSRnGE4r849dpj2 2026-06-01]"}]
+Data Fields: [usuario_insert]
+sources: connector\mutations.gql [1556B] connector\queries.gql [851B] 
+I0601 16:32:34.693224   25376 execute.go:57] Database ping is quick (likely cached), took 581.3µs
+I0601 16:32:34.694367   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 24dc] ExecuteQuery query BuscarContasBancarias: succeeded. Connector: default
+I0601 16:32:34.695019   25376 execute.go:57] Database ping is quick (likely cached), took 651.9µs
+I0601 16:32:34.696216   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 24dc] ExecuteQuery query BuscarCategorias: succeeded. Connector: default
+I0601 16:32:44.380692   25376 execute.go:57] Database ping is quick (likely cached), took 543µs
+W0601 16:32:44.382588   25376 engine.go:213] [projects/emulator/locations/emulator/services/despesa 24dc] ExecuteMutation mutation CriarUsuario: failed. Connector: default
+Auth: user of {"UID":"tuP29PTczmOizLSRnGE4r849dpj2","Token":{"aud":"to-do-list-artur","auth_time":1780342365,"email":"arturdlmeira@gmail.com","email_verified":true,"exp":1780345965,"firebase":{"identities":{"email":["arturdlmeira@gmail.com"],"google.com":["103614178496860493664"]},"sign_in_provider":"google.com"},"iat":1780342365,"iss":"https://securetoken.google.com/to-do-list-artur","name":"Artur Diniz","picture":"https://lh3.googleusercontent.com/a/ACg8ocLA2Q6ZufixICd6pmX4rO03gTgW-xSKtpjSEPpKcfs5Fmu_NsxluQ=s96-c","sub":"tuP29PTczmOizLSRnGE4r849dpj2","user_id":"tuP29PTczmOizLSRnGE4r849dpj2"}}
+
+Variables Set: [email id]
+Errors: [message:"violates SQL unique constraint: usuario_pkey"  path:{values:{string_value:"usuario_insert"}}  extensions:{code:ALREADY_EXISTS  debug_details:"PostgreSQL runtime error (err_code: 23505): pq: duplicate key value violates unique constraint \"usuario_pkey\"\nWITH \"usuario_insert_temp\" AS (INSERT INTO \"public\".\"usuario\" (\"email\",\"id\",\"data_cadastro\") VALUES ( $1 ::text, $2 ::text, $3 ::date) RETURNING jsonb_build_object('id', \"id\") AS j) SELECT * FROM \"usuario_insert_temp\"\nParams: [arturdlmeira@gmail.com tuP29PTczmOizLSRnGE4r849dpj2 2026-06-01]"}]
+Data Fields: [usuario_insert]
+sources: connector\mutations.gql [1556B] connector\queries.gql [851B] 
+I0601 16:32:48.397847   25376 execute.go:57] Database ping is quick (likely cached), took 522.1µs
+I0601 16:32:48.405721   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 24dc] ExecuteMutation mutation CriarContaBancaria: succeeded. Connector: default
+I0601 16:32:55.406551   25376 execute.go:57] Database ping is quick (likely cached), took 525µs
+W0601 16:32:55.408373   25376 engine.go:213] [projects/emulator/locations/emulator/services/despesa 24dc] ExecuteMutation mutation CriarUsuario: failed. Connector: default
+Auth: user of {"UID":"tuP29PTczmOizLSRnGE4r849dpj2","Token":{"aud":"to-do-list-artur","auth_time":1780342365,"email":"arturdlmeira@gmail.com","email_verified":true,"exp":1780345965,"firebase":{"identities":{"email":["arturdlmeira@gmail.com"],"google.com":["103614178496860493664"]},"sign_in_provider":"google.com"},"iat":1780342365,"iss":"https://securetoken.google.com/to-do-list-artur","name":"Artur Diniz","picture":"https://lh3.googleusercontent.com/a/ACg8ocLA2Q6ZufixICd6pmX4rO03gTgW-xSKtpjSEPpKcfs5Fmu_NsxluQ=s96-c","sub":"tuP29PTczmOizLSRnGE4r849dpj2","user_id":"tuP29PTczmOizLSRnGE4r849dpj2"}}
+
+Variables Set: [email id]
+Errors: [message:"violates SQL unique constraint: usuario_pkey"  path:{values:{string_value:"usuario_insert"}}  extensions:{code:ALREADY_EXISTS  debug_details:"PostgreSQL runtime error (err_code: 23505): pq: duplicate key value violates unique constraint \"usuario_pkey\"\nWITH \"usuario_insert_temp\" AS (INSERT INTO \"public\".\"usuario\" (\"email\",\"id\",\"data_cadastro\") VALUES ( $1 ::text, $2 ::text, $3 ::date) RETURNING jsonb_build_object('id', \"id\") AS j) SELECT * FROM \"usuario_insert_temp\"\nParams: [arturdlmeira@gmail.com tuP29PTczmOizLSRnGE4r849dpj2 2026-06-01]"}]
+Data Fields: [usuario_insert]
+sources: connector\queries.gql [851B] connector\mutations.gql [1556B] 
+I0601 16:32:55.411323   25376 execute.go:57] Database ping is quick (likely cached), took 506.7µs
+I0601 16:32:55.413426   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 24dc] ExecuteQuery query BuscarContasBancarias: succeeded. Connector: default
+I0601 16:32:55.413426   25376 execute.go:57] Database ping is quick (likely cached), took 0s
+I0601 16:32:55.414344   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 24dc] ExecuteQuery query BuscarCategorias: succeeded. Connector: default
+I0601 16:33:08.904178   25376 execute.go:57] Database ping is quick (likely cached), took 504.5µs
+I0601 16:33:08.908249   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 24dc] ExecuteMutation mutation Depositar: succeeded. Connector: default
+I0601 16:33:10.919656   25376 execute.go:57] Database ping is quick (likely cached), took 523.6µs
+W0601 16:33:10.921591   25376 engine.go:213] [projects/emulator/locations/emulator/services/despesa 24dc] ExecuteMutation mutation CriarUsuario: failed. Connector: default
+Auth: user of {"UID":"tuP29PTczmOizLSRnGE4r849dpj2","Token":{"aud":"to-do-list-artur","auth_time":1780342365,"email":"arturdlmeira@gmail.com","email_verified":true,"exp":1780345965,"firebase":{"identities":{"email":["arturdlmeira@gmail.com"],"google.com":["103614178496860493664"]},"sign_in_provider":"google.com"},"iat":1780342365,"iss":"https://securetoken.google.com/to-do-list-artur","name":"Artur Diniz","picture":"https://lh3.googleusercontent.com/a/ACg8ocLA2Q6ZufixICd6pmX4rO03gTgW-xSKtpjSEPpKcfs5Fmu_NsxluQ=s96-c","sub":"tuP29PTczmOizLSRnGE4r849dpj2","user_id":"tuP29PTczmOizLSRnGE4r849dpj2"}}
+
+Variables Set: [email id]
+Errors: [message:"violates SQL unique constraint: usuario_pkey"  path:{values:{string_value:"usuario_insert"}}  extensions:{code:ALREADY_EXISTS  debug_details:"PostgreSQL runtime error (err_code: 23505): pq: duplicate key value violates unique constraint \"usuario_pkey\"\nWITH \"usuario_insert_temp\" AS (INSERT INTO \"public\".\"usuario\" (\"email\",\"id\",\"data_cadastro\") VALUES ( $1 ::text, $2 ::text, $3 ::date) RETURNING jsonb_build_object('id', \"id\") AS j) SELECT * FROM \"usuario_insert_temp\"\nParams: [arturdlmeira@gmail.com tuP29PTczmOizLSRnGE4r849dpj2 2026-06-01]"}]
+Data Fields: [usuario_insert]
+sources: connector\mutations.gql [1556B] connector\queries.gql [851B] 
+I0601 16:33:10.925094   25376 execute.go:57] Database ping is quick (likely cached), took 503.4µs
+I0601 16:33:10.926369   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 24dc] ExecuteQuery query BuscarContasBancarias: succeeded. Connector: default
+I0601 16:33:10.927021   25376 execute.go:57] Database ping is quick (likely cached), took 652.5µs
+I0601 16:33:10.927916   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 24dc] ExecuteQuery query BuscarCategorias: succeeded. Connector: default
+I0601 16:33:15.632910   25376 execute.go:57] Database ping is quick (likely cached), took 524.3µs
+W0601 16:33:15.634702   25376 engine.go:213] [projects/emulator/locations/emulator/services/despesa 24dc] ExecuteMutation mutation CriarUsuario: failed. Connector: default
+Auth: user of {"UID":"tuP29PTczmOizLSRnGE4r849dpj2","Token":{"aud":"to-do-list-artur","auth_time":1780342365,"email":"arturdlmeira@gmail.com","email_verified":true,"exp":1780345965,"firebase":{"identities":{"email":["arturdlmeira@gmail.com"],"google.com":["103614178496860493664"]},"sign_in_provider":"google.com"},"iat":1780342365,"iss":"https://securetoken.google.com/to-do-list-artur","name":"Artur Diniz","picture":"https://lh3.googleusercontent.com/a/ACg8ocLA2Q6ZufixICd6pmX4rO03gTgW-xSKtpjSEPpKcfs5Fmu_NsxluQ=s96-c","sub":"tuP29PTczmOizLSRnGE4r849dpj2","user_id":"tuP29PTczmOizLSRnGE4r849dpj2"}}
+
+Variables Set: [email id]
+Errors: [message:"violates SQL unique constraint: usuario_pkey"  path:{values:{string_value:"usuario_insert"}}  extensions:{code:ALREADY_EXISTS  debug_details:"PostgreSQL runtime error (err_code: 23505): pq: duplicate key value violates unique constraint \"usuario_pkey\"\nWITH \"usuario_insert_temp\" AS (INSERT INTO \"public\".\"usuario\" (\"email\",\"id\",\"data_cadastro\") VALUES ( $1 ::text, $2 ::text, $3 ::date) RETURNING jsonb_build_object('id', \"id\") AS j) SELECT * FROM \"usuario_insert_temp\"\nParams: [arturdlmeira@gmail.com tuP29PTczmOizLSRnGE4r849dpj2 2026-06-01]"}]
+Data Fields: [usuario_insert]
+sources: connector\mutations.gql [1556B] connector\queries.gql [851B] 
+I0601 16:33:15.635226   25376 execute.go:57] Database ping is quick (likely cached), took 0s
+I0601 16:33:15.636865   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 24dc] ExecuteQuery query BuscarContasBancarias: succeeded. Connector: default
+I0601 16:33:15.637452   25376 execute.go:57] Database ping is quick (likely cached), took 586.8µs
+I0601 16:33:15.637982   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 24dc] ExecuteQuery query BuscarCategorias: succeeded. Connector: default
+I0601 16:33:36.574734   25376 execute.go:57] Database ping is quick (likely cached), took 1.2002ms
+I0601 16:33:36.576185   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 24dc] ExecuteMutation mutation CriarContaBancaria: succeeded. Connector: default
+I0601 18:17:38.107583   25376 execute.go:57] Database ping is quick (likely cached), took 1.0634ms
+W0601 18:17:38.109875   25376 engine.go:213] [projects/emulator/locations/emulator/services/despesa 24dc] ExecuteMutation mutation CriarUsuario: failed. Connector: default
+Auth: user of {"UID":"tuP29PTczmOizLSRnGE4r849dpj2","Token":{"aud":"to-do-list-artur","auth_time":1780342365,"email":"arturdlmeira@gmail.com","email_verified":true,"exp":1780352250,"firebase":{"identities":{"email":["arturdlmeira@gmail.com"],"google.com":["103614178496860493664"]},"sign_in_provider":"google.com"},"iat":1780348650,"iss":"https://securetoken.google.com/to-do-list-artur","name":"Artur Diniz","picture":"https://lh3.googleusercontent.com/a/ACg8ocLA2Q6ZufixICd6pmX4rO03gTgW-xSKtpjSEPpKcfs5Fmu_NsxluQ=s96-c","sub":"tuP29PTczmOizLSRnGE4r849dpj2","user_id":"tuP29PTczmOizLSRnGE4r849dpj2"}}
+
+Variables Set: [email id]
+Errors: [message:"violates SQL unique constraint: usuario_pkey"  path:{values:{string_value:"usuario_insert"}}  extensions:{code:ALREADY_EXISTS  debug_details:"PostgreSQL runtime error (err_code: 23505): pq: duplicate key value violates unique constraint \"usuario_pkey\"\nWITH \"usuario_insert_temp\" AS (INSERT INTO \"public\".\"usuario\" (\"email\",\"id\",\"data_cadastro\") VALUES ( $1 ::text, $2 ::text, $3 ::date) RETURNING jsonb_build_object('id', \"id\") AS j) SELECT * FROM \"usuario_insert_temp\"\nParams: [arturdlmeira@gmail.com tuP29PTczmOizLSRnGE4r849dpj2 2026-06-01]"}]
+Data Fields: [usuario_insert]
+sources: connector\mutations.gql [1556B] connector\queries.gql [851B] 
+I0601 18:17:38.110527   25376 execute.go:57] Database ping is quick (likely cached), took 652.5µs
+I0601 18:17:38.111479   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 24dc] ExecuteQuery query BuscarCategorias: succeeded. Connector: default
+I0601 18:17:38.111479   25376 execute.go:57] Database ping is quick (likely cached), took 0s
+I0601 18:17:38.112995   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 24dc] ExecuteQuery query BuscarContasBancarias: succeeded. Connector: default
+I0601 18:18:01.403670   25376 execute.go:57] Database ping is quick (likely cached), took 872.2µs
+I0601 18:18:01.407907   25376 execute.go:57] Database ping is quick (likely cached), took 503.6µs
+I0601 18:18:01.409043   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 24dc] ExecuteMutation mutation RegistrarDespesa: succeeded. Connector: default
+I0601 18:18:03.989152   25376 execute.go:57] Database ping is quick (likely cached), took 535.3µs
+W0601 18:18:03.991041   25376 engine.go:213] [projects/emulator/locations/emulator/services/despesa 24dc] ExecuteMutation mutation CriarUsuario: failed. Connector: default
+Auth: user of {"UID":"tuP29PTczmOizLSRnGE4r849dpj2","Token":{"aud":"to-do-list-artur","auth_time":1780342365,"email":"arturdlmeira@gmail.com","email_verified":true,"exp":1780352250,"firebase":{"identities":{"email":["arturdlmeira@gmail.com"],"google.com":["103614178496860493664"]},"sign_in_provider":"google.com"},"iat":1780348650,"iss":"https://securetoken.google.com/to-do-list-artur","name":"Artur Diniz","picture":"https://lh3.googleusercontent.com/a/ACg8ocLA2Q6ZufixICd6pmX4rO03gTgW-xSKtpjSEPpKcfs5Fmu_NsxluQ=s96-c","sub":"tuP29PTczmOizLSRnGE4r849dpj2","user_id":"tuP29PTczmOizLSRnGE4r849dpj2"}}
+
+Variables Set: [email id]
+Errors: [message:"violates SQL unique constraint: usuario_pkey"  path:{values:{string_value:"usuario_insert"}}  extensions:{code:ALREADY_EXISTS  debug_details:"PostgreSQL runtime error (err_code: 23505): pq: duplicate key value violates unique constraint \"usuario_pkey\"\nWITH \"usuario_insert_temp\" AS (INSERT INTO \"public\".\"usuario\" (\"email\",\"id\",\"data_cadastro\") VALUES ( $1 ::text, $2 ::text, $3 ::date) RETURNING jsonb_build_object('id', \"id\") AS j) SELECT * FROM \"usuario_insert_temp\"\nParams: [arturdlmeira@gmail.com tuP29PTczmOizLSRnGE4r849dpj2 2026-06-01]"}]
+Data Fields: [usuario_insert]
+sources: connector\mutations.gql [1556B] connector\queries.gql [851B] 
+I0601 18:18:03.991630   25376 execute.go:57] Database ping is quick (likely cached), took 589.3µs
+I0601 18:18:03.992677   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 24dc] ExecuteQuery query BuscarContasBancarias: succeeded. Connector: default
+I0601 18:18:03.993373   25376 execute.go:57] Database ping is quick (likely cached), took 696.7µs
+I0601 18:18:03.993864   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 24dc] ExecuteQuery query BuscarCategorias: succeeded. Connector: default
+I0601 18:23:37.640020   25376 load.go:31] Reloading schema and connectors...
+I0601 18:23:37.678881   25376 migrate.go:24] Running migration SQL:
+Step 1: ALTER TABLE "public"."despesa" ADD COLUMN "tipo" text NOT NULL DEFAULT 'despesa'
+I0601 18:23:37.725724   25376 control.go:100] [projects/emulator/locations/emulator/services/despesa f792] UpdateResources(): done
+Main schema: sources: schema\schema.gql [911B] 
+Connector "default": sources: connector\mutations.gql [1356B] connector\queries.gql [861B] 
+I0601 18:23:37.732614   25376 codegen.go:101] [connector "default" javascriptSdk] Generating sources into "C:\\Users\\artur\\OneDrive\\Documentos\\projetos\\despesa\\frontend\\src\\dataconnect-generated"
+I0601 18:23:37.739041   25376 collector.go:107] schema extensions wrote into "C:\\Users\\artur\\OneDrive\\Documentos\\projetos\\despesa\\dataconnect\\.dataconnect\\schema"
+Generated sources: main\input.gql [32210B] main\relation.gql [14785B] main\query.gql [5266B] main\mutation.gql [14165B] prelude.gql [84995B] main\implicit.gql [1070B] 
+I0601 18:23:37.743666   25376 collector.go:107] connector "default" javascriptSdk wrote into "C:\\Users\\artur\\OneDrive\\Documentos\\projetos\\despesa\\frontend\\src\\dataconnect-generated"
+Generated sources: .guides/usage.md [1681B] .guides/setup.md [578B] esm\index.esm.js [4288B] README.md [36565B] .guides/config.json [236B] index.d.ts [7374B] esm\package.json [17B] index.cjs.js [4788B] package.json [609B] 
+I0601 18:23:37.743666   25376 installsdk.go:138] generate.javascriptSdk.packageJsonDir is not specified, skipping automatic installation of package
+I0601 18:23:37.743666   25376 load.go:109] Finished reloading
+I0601 18:26:59.384266   25376 execute.go:57] Database ping is quick (likely cached), took 1.0773ms
+W0601 18:26:59.385899   25376 engine.go:213] [projects/emulator/locations/emulator/services/despesa f792] ExecuteMutation mutation CriarUsuario: failed. Connector: default
+Auth: user of {"UID":"tuP29PTczmOizLSRnGE4r849dpj2","Token":{"aud":"to-do-list-artur","auth_time":1780342365,"email":"arturdlmeira@gmail.com","email_verified":true,"exp":1780352250,"firebase":{"identities":{"email":["arturdlmeira@gmail.com"],"google.com":["103614178496860493664"]},"sign_in_provider":"google.com"},"iat":1780348650,"iss":"https://securetoken.google.com/to-do-list-artur","name":"Artur Diniz","picture":"https://lh3.googleusercontent.com/a/ACg8ocLA2Q6ZufixICd6pmX4rO03gTgW-xSKtpjSEPpKcfs5Fmu_NsxluQ=s96-c","sub":"tuP29PTczmOizLSRnGE4r849dpj2","user_id":"tuP29PTczmOizLSRnGE4r849dpj2"}}
+
+Variables Set: [email id]
+Errors: [message:"violates SQL unique constraint: usuario_pkey"  path:{values:{string_value:"usuario_insert"}}  extensions:{code:ALREADY_EXISTS  debug_details:"PostgreSQL runtime error (err_code: 23505): pq: duplicate key value violates unique constraint \"usuario_pkey\"\nWITH \"usuario_insert_temp\" AS (INSERT INTO \"public\".\"usuario\" (\"email\",\"id\",\"data_cadastro\") VALUES ( $1 ::text, $2 ::text, $3 ::date) RETURNING jsonb_build_object('id', \"id\") AS j) SELECT * FROM \"usuario_insert_temp\"\nParams: [arturdlmeira@gmail.com tuP29PTczmOizLSRnGE4r849dpj2 2026-06-01]"}]
+Data Fields: [usuario_insert]
+sources: connector\mutations.gql [1356B] connector\queries.gql [861B] 
+I0601 18:26:59.386429   25376 execute.go:57] Database ping is quick (likely cached), took 529.6µs
+I0601 18:26:59.388621   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa f792] ExecuteQuery query BuscarContasBancarias: succeeded. Connector: default
+I0601 18:26:59.389126   25376 execute.go:57] Database ping is quick (likely cached), took 504.5µs
+I0601 18:26:59.390079   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa f792] ExecuteQuery query BuscarCategorias: succeeded. Connector: default
+I0601 18:27:08.928788   25376 execute.go:57] Database ping is quick (likely cached), took 520.7µs
+I0601 18:27:08.932027   25376 execute.go:57] Database ping is quick (likely cached), took 774µs
+I0601 18:27:08.933113   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa f792] ExecuteMutation mutation RegistrarDespesa: succeeded. Connector: default
+I0601 18:27:15.072859   25376 execute.go:57] Database ping is quick (likely cached), took 524µs
+W0601 18:27:15.074557   25376 engine.go:213] [projects/emulator/locations/emulator/services/despesa f792] ExecuteMutation mutation CriarUsuario: failed. Connector: default
+Auth: user of {"UID":"tuP29PTczmOizLSRnGE4r849dpj2","Token":{"aud":"to-do-list-artur","auth_time":1780342365,"email":"arturdlmeira@gmail.com","email_verified":true,"exp":1780352250,"firebase":{"identities":{"email":["arturdlmeira@gmail.com"],"google.com":["103614178496860493664"]},"sign_in_provider":"google.com"},"iat":1780348650,"iss":"https://securetoken.google.com/to-do-list-artur","name":"Artur Diniz","picture":"https://lh3.googleusercontent.com/a/ACg8ocLA2Q6ZufixICd6pmX4rO03gTgW-xSKtpjSEPpKcfs5Fmu_NsxluQ=s96-c","sub":"tuP29PTczmOizLSRnGE4r849dpj2","user_id":"tuP29PTczmOizLSRnGE4r849dpj2"}}
+
+Variables Set: [email id]
+Errors: [message:"violates SQL unique constraint: usuario_pkey"  path:{values:{string_value:"usuario_insert"}}  extensions:{code:ALREADY_EXISTS  debug_details:"PostgreSQL runtime error (err_code: 23505): pq: duplicate key value violates unique constraint \"usuario_pkey\"\nWITH \"usuario_insert_temp\" AS (INSERT INTO \"public\".\"usuario\" (\"email\",\"id\",\"data_cadastro\") VALUES ( $1 ::text, $2 ::text, $3 ::date) RETURNING jsonb_build_object('id', \"id\") AS j) SELECT * FROM \"usuario_insert_temp\"\nParams: [arturdlmeira@gmail.com tuP29PTczmOizLSRnGE4r849dpj2 2026-06-01]"}]
+Data Fields: [usuario_insert]
+sources: connector\mutations.gql [1356B] connector\queries.gql [861B] 
+I0601 18:27:15.075581   25376 execute.go:57] Database ping is quick (likely cached), took 1.0237ms
+I0601 18:27:15.076754   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa f792] ExecuteQuery query BuscarContasBancarias: succeeded. Connector: default
+I0601 18:27:15.077279   25376 execute.go:57] Database ping is quick (likely cached), took 525.2µs
+I0601 18:27:15.078379   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa f792] ExecuteQuery query BuscarCategorias: succeeded. Connector: default
+I0601 18:28:10.830867   25376 execute.go:57] Database ping is quick (likely cached), took 536.8µs
+W0601 18:28:10.832611   25376 engine.go:213] [projects/emulator/locations/emulator/services/despesa f792] ExecuteMutation mutation CriarUsuario: failed. Connector: default
+Auth: user of {"UID":"tuP29PTczmOizLSRnGE4r849dpj2","Token":{"aud":"to-do-list-artur","auth_time":1780342365,"email":"arturdlmeira@gmail.com","email_verified":true,"exp":1780352250,"firebase":{"identities":{"email":["arturdlmeira@gmail.com"],"google.com":["103614178496860493664"]},"sign_in_provider":"google.com"},"iat":1780348650,"iss":"https://securetoken.google.com/to-do-list-artur","name":"Artur Diniz","picture":"https://lh3.googleusercontent.com/a/ACg8ocLA2Q6ZufixICd6pmX4rO03gTgW-xSKtpjSEPpKcfs5Fmu_NsxluQ=s96-c","sub":"tuP29PTczmOizLSRnGE4r849dpj2","user_id":"tuP29PTczmOizLSRnGE4r849dpj2"}}
+
+Variables Set: [email id]
+Errors: [message:"violates SQL unique constraint: usuario_pkey"  path:{values:{string_value:"usuario_insert"}}  extensions:{code:ALREADY_EXISTS  debug_details:"PostgreSQL runtime error (err_code: 23505): pq: duplicate key value violates unique constraint \"usuario_pkey\"\nWITH \"usuario_insert_temp\" AS (INSERT INTO \"public\".\"usuario\" (\"email\",\"id\",\"data_cadastro\") VALUES ( $1 ::text, $2 ::text, $3 ::date) RETURNING jsonb_build_object('id', \"id\") AS j) SELECT * FROM \"usuario_insert_temp\"\nParams: [arturdlmeira@gmail.com tuP29PTczmOizLSRnGE4r849dpj2 2026-06-01]"}]
+Data Fields: [usuario_insert]
+sources: connector\mutations.gql [1356B] connector\queries.gql [861B] 
+I0601 18:28:10.836393   25376 execute.go:57] Database ping is quick (likely cached), took 505.6µs
+I0601 18:28:10.837759   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa f792] ExecuteQuery query BuscarContasBancarias: succeeded. Connector: default
+I0601 18:28:10.838474   25376 execute.go:57] Database ping is quick (likely cached), took 714.6µs
+I0601 18:28:10.839348   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa f792] ExecuteQuery query BuscarCategorias: succeeded. Connector: default
+I0601 18:29:33.767145   25376 execute.go:57] Database ping is quick (likely cached), took 568µs
+W0601 18:29:33.768889   25376 engine.go:213] [projects/emulator/locations/emulator/services/despesa f792] ExecuteMutation mutation CriarUsuario: failed. Connector: default
+Auth: user of {"UID":"tuP29PTczmOizLSRnGE4r849dpj2","Token":{"aud":"to-do-list-artur","auth_time":1780342365,"email":"arturdlmeira@gmail.com","email_verified":true,"exp":1780352250,"firebase":{"identities":{"email":["arturdlmeira@gmail.com"],"google.com":["103614178496860493664"]},"sign_in_provider":"google.com"},"iat":1780348650,"iss":"https://securetoken.google.com/to-do-list-artur","name":"Artur Diniz","picture":"https://lh3.googleusercontent.com/a/ACg8ocLA2Q6ZufixICd6pmX4rO03gTgW-xSKtpjSEPpKcfs5Fmu_NsxluQ=s96-c","sub":"tuP29PTczmOizLSRnGE4r849dpj2","user_id":"tuP29PTczmOizLSRnGE4r849dpj2"}}
+
+Variables Set: [email id]
+Errors: [message:"violates SQL unique constraint: usuario_pkey"  path:{values:{string_value:"usuario_insert"}}  extensions:{code:ALREADY_EXISTS  debug_details:"PostgreSQL runtime error (err_code: 23505): pq: duplicate key value violates unique constraint \"usuario_pkey\"\nWITH \"usuario_insert_temp\" AS (INSERT INTO \"public\".\"usuario\" (\"email\",\"id\",\"data_cadastro\") VALUES ( $1 ::text, $2 ::text, $3 ::date) RETURNING jsonb_build_object('id', \"id\") AS j) SELECT * FROM \"usuario_insert_temp\"\nParams: [arturdlmeira@gmail.com tuP29PTczmOizLSRnGE4r849dpj2 2026-06-01]"}]
+Data Fields: [usuario_insert]
+sources: connector\mutations.gql [1356B] connector\queries.gql [861B] 
+I0601 18:29:33.771657   25376 execute.go:57] Database ping is quick (likely cached), took 504.6µs
+I0601 18:29:33.772350   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa f792] ExecuteQuery query BuscarCategorias: succeeded. Connector: default
+I0601 18:29:33.773012   25376 execute.go:57] Database ping is quick (likely cached), took 661.8µs
+I0601 18:29:33.774118   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa f792] ExecuteQuery query BuscarContasBancarias: succeeded. Connector: default
+I0601 18:31:35.354386   25376 execute.go:57] Database ping is quick (likely cached), took 534.7µs
+W0601 18:31:35.355821   25376 engine.go:213] [projects/emulator/locations/emulator/services/despesa f792] ExecuteMutation mutation CriarUsuario: failed. Connector: default
+Auth: user of {"UID":"tuP29PTczmOizLSRnGE4r849dpj2","Token":{"aud":"to-do-list-artur","auth_time":1780342365,"email":"arturdlmeira@gmail.com","email_verified":true,"exp":1780352250,"firebase":{"identities":{"email":["arturdlmeira@gmail.com"],"google.com":["103614178496860493664"]},"sign_in_provider":"google.com"},"iat":1780348650,"iss":"https://securetoken.google.com/to-do-list-artur","name":"Artur Diniz","picture":"https://lh3.googleusercontent.com/a/ACg8ocLA2Q6ZufixICd6pmX4rO03gTgW-xSKtpjSEPpKcfs5Fmu_NsxluQ=s96-c","sub":"tuP29PTczmOizLSRnGE4r849dpj2","user_id":"tuP29PTczmOizLSRnGE4r849dpj2"}}
+
+Variables Set: [email id]
+Errors: [message:"violates SQL unique constraint: usuario_pkey"  path:{values:{string_value:"usuario_insert"}}  extensions:{code:ALREADY_EXISTS  debug_details:"PostgreSQL runtime error (err_code: 23505): pq: duplicate key value violates unique constraint \"usuario_pkey\"\nWITH \"usuario_insert_temp\" AS (INSERT INTO \"public\".\"usuario\" (\"email\",\"id\",\"data_cadastro\") VALUES ( $1 ::text, $2 ::text, $3 ::date) RETURNING jsonb_build_object('id', \"id\") AS j) SELECT * FROM \"usuario_insert_temp\"\nParams: [arturdlmeira@gmail.com tuP29PTczmOizLSRnGE4r849dpj2 2026-06-01]"}]
+Data Fields: [usuario_insert]
+sources: connector\mutations.gql [1356B] connector\queries.gql [861B] 
+I0601 18:31:35.359315   25376 execute.go:57] Database ping is quick (likely cached), took 763.2µs
+I0601 18:31:35.360734   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa f792] ExecuteQuery query BuscarContasBancarias: succeeded. Connector: default
+I0601 18:31:35.361237   25376 execute.go:57] Database ping is quick (likely cached), took 503.2µs
+I0601 18:31:35.361757   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa f792] ExecuteQuery query BuscarCategorias: succeeded. Connector: default
+I0601 18:31:35.361757   25376 execute.go:57] Database ping is quick (likely cached), took 0s
+I0601 18:31:35.365281   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa f792] ExecuteQuery query BuscarDespesas: succeeded. Connector: default
+I0601 18:31:49.721025   25376 execute.go:57] Database ping is quick (likely cached), took 529.2µs
+I0601 18:31:49.722629   25376 execute.go:57] Database ping is quick (likely cached), took 0s
+I0601 18:31:49.723792   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa f792] ExecuteMutation mutation RegistrarDespesa: succeeded. Connector: default
+I0601 18:31:55.617075   25376 execute.go:57] Database ping is quick (likely cached), took 530.4µs
+W0601 18:31:55.618327   25376 engine.go:213] [projects/emulator/locations/emulator/services/despesa f792] ExecuteMutation mutation CriarUsuario: failed. Connector: default
+Auth: user of {"UID":"tuP29PTczmOizLSRnGE4r849dpj2","Token":{"aud":"to-do-list-artur","auth_time":1780342365,"email":"arturdlmeira@gmail.com","email_verified":true,"exp":1780352250,"firebase":{"identities":{"email":["arturdlmeira@gmail.com"],"google.com":["103614178496860493664"]},"sign_in_provider":"google.com"},"iat":1780348650,"iss":"https://securetoken.google.com/to-do-list-artur","name":"Artur Diniz","picture":"https://lh3.googleusercontent.com/a/ACg8ocLA2Q6ZufixICd6pmX4rO03gTgW-xSKtpjSEPpKcfs5Fmu_NsxluQ=s96-c","sub":"tuP29PTczmOizLSRnGE4r849dpj2","user_id":"tuP29PTczmOizLSRnGE4r849dpj2"}}
+
+Variables Set: [email id]
+Errors: [message:"violates SQL unique constraint: usuario_pkey"  path:{values:{string_value:"usuario_insert"}}  extensions:{code:ALREADY_EXISTS  debug_details:"PostgreSQL runtime error (err_code: 23505): pq: duplicate key value violates unique constraint \"usuario_pkey\"\nWITH \"usuario_insert_temp\" AS (INSERT INTO \"public\".\"usuario\" (\"email\",\"id\",\"data_cadastro\") VALUES ( $1 ::text, $2 ::text, $3 ::date) RETURNING jsonb_build_object('id', \"id\") AS j) SELECT * FROM \"usuario_insert_temp\"\nParams: [arturdlmeira@gmail.com tuP29PTczmOizLSRnGE4r849dpj2 2026-06-01]"}]
+Data Fields: [usuario_insert]
+sources: connector\mutations.gql [1356B] connector\queries.gql [861B] 
+I0601 18:31:55.623283   25376 execute.go:57] Database ping is quick (likely cached), took 509.5µs
+I0601 18:31:55.624599   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa f792] ExecuteQuery query BuscarContasBancarias: succeeded. Connector: default
+I0601 18:31:55.625284   25376 execute.go:57] Database ping is quick (likely cached), took 684.9µs
+I0601 18:31:55.625808   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa f792] ExecuteQuery query BuscarCategorias: succeeded. Connector: default
+I0601 18:31:55.625808   25376 execute.go:57] Database ping is quick (likely cached), took 0s
+I0601 18:31:55.627285   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa f792] ExecuteQuery query BuscarDespesas: succeeded. Connector: default
+I0601 18:32:10.576563   25376 execute.go:57] Database ping is quick (likely cached), took 525.7µs
+I0601 18:32:10.578607   25376 execute.go:57] Database ping is quick (likely cached), took 0s
+I0601 18:32:10.579815   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa f792] ExecuteMutation mutation RegistrarDespesa: succeeded. Connector: default
+I0601 18:32:14.181925   25376 execute.go:57] Database ping is quick (likely cached), took 521.1µs
+W0601 18:32:14.183720   25376 engine.go:213] [projects/emulator/locations/emulator/services/despesa f792] ExecuteMutation mutation CriarUsuario: failed. Connector: default
+Auth: user of {"UID":"tuP29PTczmOizLSRnGE4r849dpj2","Token":{"aud":"to-do-list-artur","auth_time":1780342365,"email":"arturdlmeira@gmail.com","email_verified":true,"exp":1780352250,"firebase":{"identities":{"email":["arturdlmeira@gmail.com"],"google.com":["103614178496860493664"]},"sign_in_provider":"google.com"},"iat":1780348650,"iss":"https://securetoken.google.com/to-do-list-artur","name":"Artur Diniz","picture":"https://lh3.googleusercontent.com/a/ACg8ocLA2Q6ZufixICd6pmX4rO03gTgW-xSKtpjSEPpKcfs5Fmu_NsxluQ=s96-c","sub":"tuP29PTczmOizLSRnGE4r849dpj2","user_id":"tuP29PTczmOizLSRnGE4r849dpj2"}}
+
+Variables Set: [email id]
+Errors: [message:"violates SQL unique constraint: usuario_pkey"  path:{values:{string_value:"usuario_insert"}}  extensions:{code:ALREADY_EXISTS  debug_details:"PostgreSQL runtime error (err_code: 23505): pq: duplicate key value violates unique constraint \"usuario_pkey\"\nWITH \"usuario_insert_temp\" AS (INSERT INTO \"public\".\"usuario\" (\"email\",\"id\",\"data_cadastro\") VALUES ( $1 ::text, $2 ::text, $3 ::date) RETURNING jsonb_build_object('id', \"id\") AS j) SELECT * FROM \"usuario_insert_temp\"\nParams: [arturdlmeira@gmail.com tuP29PTczmOizLSRnGE4r849dpj2 2026-06-01]"}]
+Data Fields: [usuario_insert]
+sources: connector\mutations.gql [1356B] connector\queries.gql [861B] 
+I0601 18:32:14.189431   25376 execute.go:57] Database ping is quick (likely cached), took 709.6µs
+I0601 18:32:14.190849   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa f792] ExecuteQuery query BuscarContasBancarias: succeeded. Connector: default
+I0601 18:32:14.191419   25376 execute.go:57] Database ping is quick (likely cached), took 570.2µs
+I0601 18:32:14.192634   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa f792] ExecuteQuery query BuscarCategorias: succeeded. Connector: default
+I0601 18:32:14.192634   25376 execute.go:57] Database ping is quick (likely cached), took 0s
+I0601 18:32:14.194938   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa f792] ExecuteQuery query BuscarDespesas: succeeded. Connector: default
+I0601 18:35:14.699775   25376 execute.go:57] Database ping is quick (likely cached), took 533.7µs
+W0601 18:35:14.701512   25376 engine.go:213] [projects/emulator/locations/emulator/services/despesa f792] ExecuteMutation mutation CriarUsuario: failed. Connector: default
+Auth: user of {"UID":"tuP29PTczmOizLSRnGE4r849dpj2","Token":{"aud":"to-do-list-artur","auth_time":1780342365,"email":"arturdlmeira@gmail.com","email_verified":true,"exp":1780352250,"firebase":{"identities":{"email":["arturdlmeira@gmail.com"],"google.com":["103614178496860493664"]},"sign_in_provider":"google.com"},"iat":1780348650,"iss":"https://securetoken.google.com/to-do-list-artur","name":"Artur Diniz","picture":"https://lh3.googleusercontent.com/a/ACg8ocLA2Q6ZufixICd6pmX4rO03gTgW-xSKtpjSEPpKcfs5Fmu_NsxluQ=s96-c","sub":"tuP29PTczmOizLSRnGE4r849dpj2","user_id":"tuP29PTczmOizLSRnGE4r849dpj2"}}
+
+Variables Set: [email id]
+Errors: [message:"violates SQL unique constraint: usuario_pkey"  path:{values:{string_value:"usuario_insert"}}  extensions:{code:ALREADY_EXISTS  debug_details:"PostgreSQL runtime error (err_code: 23505): pq: duplicate key value violates unique constraint \"usuario_pkey\"\nWITH \"usuario_insert_temp\" AS (INSERT INTO \"public\".\"usuario\" (\"email\",\"id\",\"data_cadastro\") VALUES ( $1 ::text, $2 ::text, $3 ::date) RETURNING jsonb_build_object('id', \"id\") AS j) SELECT * FROM \"usuario_insert_temp\"\nParams: [arturdlmeira@gmail.com tuP29PTczmOizLSRnGE4r849dpj2 2026-06-01]"}]
+Data Fields: [usuario_insert]
+sources: connector\mutations.gql [1356B] connector\queries.gql [861B] 
+I0601 18:35:14.705416   25376 execute.go:57] Database ping is quick (likely cached), took 717.3µs
+I0601 18:35:14.706670   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa f792] ExecuteQuery query BuscarContasBancarias: succeeded. Connector: default
+I0601 18:35:14.707389   25376 execute.go:57] Database ping is quick (likely cached), took 718.4µs
+I0601 18:35:14.708278   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa f792] ExecuteQuery query BuscarCategorias: succeeded. Connector: default
+I0601 18:35:14.708278   25376 execute.go:57] Database ping is quick (likely cached), took 0s
+I0601 18:35:14.710562   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa f792] ExecuteQuery query BuscarDespesas: succeeded. Connector: default
+I0601 18:35:21.960937   25376 execute.go:57] Database ping is quick (likely cached), took 525.8µs
+I0601 18:35:21.962599   25376 execute.go:57] Database ping is quick (likely cached), took 0s
+I0601 18:35:21.963893   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa f792] ExecuteMutation mutation RegistrarDespesa: succeeded. Connector: default
+I0601 18:35:33.253087   25376 execute.go:57] Database ping is quick (likely cached), took 0s
+I0601 18:35:33.255156   25376 execute.go:57] Database ping is quick (likely cached), took 0s
+I0601 18:35:33.256386   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa f792] ExecuteMutation mutation RegistrarDespesa: succeeded. Connector: default
+I0601 18:42:27.640299   25376 load.go:31] Reloading schema and connectors...
+I0601 18:42:27.710352   25376 control.go:100] [projects/emulator/locations/emulator/services/despesa 4c24] UpdateResources(): done
+Main schema: sources: schema\schema.gql [911B] 
+Connector "default": sources: connector\mutations.gql [1817B] connector\queries.gql [885B] 
+I0601 18:42:27.718237   25376 codegen.go:101] [connector "default" javascriptSdk] Generating sources into "C:\\Users\\artur\\OneDrive\\Documentos\\projetos\\despesa\\frontend\\src\\dataconnect-generated"
+I0601 18:42:27.723966   25376 collector.go:107] schema extensions wrote into "C:\\Users\\artur\\OneDrive\\Documentos\\projetos\\despesa\\dataconnect\\.dataconnect\\schema"
+Generated sources: main\query.gql [5266B] main\mutation.gql [14165B] prelude.gql [84995B] main\implicit.gql [1070B] main\input.gql [32210B] main\relation.gql [14785B] 
+I0601 18:42:27.729198   25376 collector.go:107] connector "default" javascriptSdk wrote into "C:\\Users\\artur\\OneDrive\\Documentos\\projetos\\despesa\\frontend\\src\\dataconnect-generated"
+Generated sources: esm\index.esm.js [5322B] esm\package.json [17B] index.cjs.js [5936B] package.json [609B] README.md [45691B] .guides/usage.md [2037B] index.d.ts [9200B] .guides/setup.md [578B] .guides/config.json [236B] 
+I0601 18:42:27.729198   25376 installsdk.go:138] generate.javascriptSdk.packageJsonDir is not specified, skipping automatic installation of package
+I0601 18:42:27.729198   25376 load.go:109] Finished reloading
+I0601 18:42:28.601016   25376 execute.go:57] Database ping is quick (likely cached), took 538.6µs
+W0601 18:42:28.602609   25376 engine.go:213] [projects/emulator/locations/emulator/services/despesa 4c24] ExecuteMutation mutation CriarUsuario: failed. Connector: default
+Auth: user of {"UID":"tuP29PTczmOizLSRnGE4r849dpj2","Token":{"aud":"to-do-list-artur","auth_time":1780342365,"email":"arturdlmeira@gmail.com","email_verified":true,"exp":1780352250,"firebase":{"identities":{"email":["arturdlmeira@gmail.com"],"google.com":["103614178496860493664"]},"sign_in_provider":"google.com"},"iat":1780348650,"iss":"https://securetoken.google.com/to-do-list-artur","name":"Artur Diniz","picture":"https://lh3.googleusercontent.com/a/ACg8ocLA2Q6ZufixICd6pmX4rO03gTgW-xSKtpjSEPpKcfs5Fmu_NsxluQ=s96-c","sub":"tuP29PTczmOizLSRnGE4r849dpj2","user_id":"tuP29PTczmOizLSRnGE4r849dpj2"}}
+
+Variables Set: [email id]
+Errors: [message:"violates SQL unique constraint: usuario_pkey"  path:{values:{string_value:"usuario_insert"}}  extensions:{code:ALREADY_EXISTS  debug_details:"PostgreSQL runtime error (err_code: 23505): pq: duplicate key value violates unique constraint \"usuario_pkey\"\nWITH \"usuario_insert_temp\" AS (INSERT INTO \"public\".\"usuario\" (\"email\",\"id\",\"data_cadastro\") VALUES ( $1 ::text, $2 ::text, $3 ::date) RETURNING jsonb_build_object('id', \"id\") AS j) SELECT * FROM \"usuario_insert_temp\"\nParams: [arturdlmeira@gmail.com tuP29PTczmOizLSRnGE4r849dpj2 2026-06-01]"}]
+Data Fields: [usuario_insert]
+sources: connector\mutations.gql [1817B] connector\queries.gql [885B] 
+I0601 18:42:35.601151   25376 execute.go:57] Database ping is quick (likely cached), took 521.9µs
+W0601 18:42:35.602226   25376 engine.go:213] [projects/emulator/locations/emulator/services/despesa 4c24] ExecuteMutation mutation CriarUsuario: failed. Connector: default
+Auth: user of {"UID":"tuP29PTczmOizLSRnGE4r849dpj2","Token":{"aud":"to-do-list-artur","auth_time":1780342365,"email":"arturdlmeira@gmail.com","email_verified":true,"exp":1780352250,"firebase":{"identities":{"email":["arturdlmeira@gmail.com"],"google.com":["103614178496860493664"]},"sign_in_provider":"google.com"},"iat":1780348650,"iss":"https://securetoken.google.com/to-do-list-artur","name":"Artur Diniz","picture":"https://lh3.googleusercontent.com/a/ACg8ocLA2Q6ZufixICd6pmX4rO03gTgW-xSKtpjSEPpKcfs5Fmu_NsxluQ=s96-c","sub":"tuP29PTczmOizLSRnGE4r849dpj2","user_id":"tuP29PTczmOizLSRnGE4r849dpj2"}}
+
+Variables Set: [email id]
+Errors: [message:"violates SQL unique constraint: usuario_pkey"  path:{values:{string_value:"usuario_insert"}}  extensions:{code:ALREADY_EXISTS  debug_details:"PostgreSQL runtime error (err_code: 23505): pq: duplicate key value violates unique constraint \"usuario_pkey\"\nWITH \"usuario_insert_temp\" AS (INSERT INTO \"public\".\"usuario\" (\"email\",\"id\",\"data_cadastro\") VALUES ( $1 ::text, $2 ::text, $3 ::date) RETURNING jsonb_build_object('id', \"id\") AS j) SELECT * FROM \"usuario_insert_temp\"\nParams: [arturdlmeira@gmail.com tuP29PTczmOizLSRnGE4r849dpj2 2026-06-01]"}]
+Data Fields: [usuario_insert]
+sources: connector\mutations.gql [1817B] connector\queries.gql [885B] 
+I0601 18:42:57.682332   25376 execute.go:57] Database ping is quick (likely cached), took 530.6µs
+W0601 18:42:57.684126   25376 engine.go:213] [projects/emulator/locations/emulator/services/despesa 4c24] ExecuteMutation mutation CriarUsuario: failed. Connector: default
+Auth: user of {"UID":"tuP29PTczmOizLSRnGE4r849dpj2","Token":{"aud":"to-do-list-artur","auth_time":1780342365,"email":"arturdlmeira@gmail.com","email_verified":true,"exp":1780352250,"firebase":{"identities":{"email":["arturdlmeira@gmail.com"],"google.com":["103614178496860493664"]},"sign_in_provider":"google.com"},"iat":1780348650,"iss":"https://securetoken.google.com/to-do-list-artur","name":"Artur Diniz","picture":"https://lh3.googleusercontent.com/a/ACg8ocLA2Q6ZufixICd6pmX4rO03gTgW-xSKtpjSEPpKcfs5Fmu_NsxluQ=s96-c","sub":"tuP29PTczmOizLSRnGE4r849dpj2","user_id":"tuP29PTczmOizLSRnGE4r849dpj2"}}
+
+Variables Set: [email id]
+Errors: [message:"violates SQL unique constraint: usuario_pkey"  path:{values:{string_value:"usuario_insert"}}  extensions:{code:ALREADY_EXISTS  debug_details:"PostgreSQL runtime error (err_code: 23505): pq: duplicate key value violates unique constraint \"usuario_pkey\"\nWITH \"usuario_insert_temp\" AS (INSERT INTO \"public\".\"usuario\" (\"email\",\"id\",\"data_cadastro\") VALUES ( $1 ::text, $2 ::text, $3 ::date) RETURNING jsonb_build_object('id', \"id\") AS j) SELECT * FROM \"usuario_insert_temp\"\nParams: [arturdlmeira@gmail.com tuP29PTczmOizLSRnGE4r849dpj2 2026-06-01]"}]
+Data Fields: [usuario_insert]
+sources: connector\queries.gql [885B] connector\mutations.gql [1817B] 
+I0601 18:42:57.686875   25376 execute.go:57] Database ping is quick (likely cached), took 692.6µs
+I0601 18:42:57.689079   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 4c24] ExecuteQuery query BuscarContasBancarias: succeeded. Connector: default
+I0601 18:42:57.689606   25376 execute.go:57] Database ping is quick (likely cached), took 527µs
+I0601 18:42:57.690639   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 4c24] ExecuteQuery query BuscarCategorias: succeeded. Connector: default
+I0601 18:42:57.690639   25376 execute.go:57] Database ping is quick (likely cached), took 0s
+I0601 18:42:57.693183   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 4c24] ExecuteQuery query BuscarDespesas: succeeded. Connector: default
+I0601 18:42:59.508924   25376 execute.go:57] Database ping is quick (likely cached), took 834.5µs
+W0601 18:42:59.510476   25376 engine.go:213] [projects/emulator/locations/emulator/services/despesa 4c24] ExecuteMutation mutation CriarUsuario: failed. Connector: default
+Auth: user of {"UID":"tuP29PTczmOizLSRnGE4r849dpj2","Token":{"aud":"to-do-list-artur","auth_time":1780342365,"email":"arturdlmeira@gmail.com","email_verified":true,"exp":1780352250,"firebase":{"identities":{"email":["arturdlmeira@gmail.com"],"google.com":["103614178496860493664"]},"sign_in_provider":"google.com"},"iat":1780348650,"iss":"https://securetoken.google.com/to-do-list-artur","name":"Artur Diniz","picture":"https://lh3.googleusercontent.com/a/ACg8ocLA2Q6ZufixICd6pmX4rO03gTgW-xSKtpjSEPpKcfs5Fmu_NsxluQ=s96-c","sub":"tuP29PTczmOizLSRnGE4r849dpj2","user_id":"tuP29PTczmOizLSRnGE4r849dpj2"}}
+
+Variables Set: [email id]
+Errors: [message:"violates SQL unique constraint: usuario_pkey"  path:{values:{string_value:"usuario_insert"}}  extensions:{code:ALREADY_EXISTS  debug_details:"PostgreSQL runtime error (err_code: 23505): pq: duplicate key value violates unique constraint \"usuario_pkey\"\nWITH \"usuario_insert_temp\" AS (INSERT INTO \"public\".\"usuario\" (\"email\",\"id\",\"data_cadastro\") VALUES ( $1 ::text, $2 ::text, $3 ::date) RETURNING jsonb_build_object('id', \"id\") AS j) SELECT * FROM \"usuario_insert_temp\"\nParams: [arturdlmeira@gmail.com tuP29PTczmOizLSRnGE4r849dpj2 2026-06-01]"}]
+Data Fields: [usuario_insert]
+sources: connector\mutations.gql [1817B] connector\queries.gql [885B] 
+I0601 18:42:59.510996   25376 execute.go:57] Database ping is quick (likely cached), took 520.7µs
+I0601 18:42:59.512086   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 4c24] ExecuteQuery query BuscarContasBancarias: succeeded. Connector: default
+I0601 18:42:59.512086   25376 execute.go:57] Database ping is quick (likely cached), took 0s
+I0601 18:42:59.512772   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 4c24] ExecuteQuery query BuscarCategorias: succeeded. Connector: default
+I0601 18:42:59.513300   25376 execute.go:57] Database ping is quick (likely cached), took 0s
+I0601 18:42:59.514578   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 4c24] ExecuteQuery query BuscarDespesas: succeeded. Connector: default
+I0601 18:43:28.779182   25376 execute.go:57] Database ping is quick (likely cached), took 524µs
+W0601 18:43:28.780468   25376 engine.go:213] [projects/emulator/locations/emulator/services/despesa 4c24] ExecuteMutation mutation CriarUsuario: failed. Connector: default
+Auth: user of {"UID":"tuP29PTczmOizLSRnGE4r849dpj2","Token":{"aud":"to-do-list-artur","auth_time":1780342365,"email":"arturdlmeira@gmail.com","email_verified":true,"exp":1780352250,"firebase":{"identities":{"email":["arturdlmeira@gmail.com"],"google.com":["103614178496860493664"]},"sign_in_provider":"google.com"},"iat":1780348650,"iss":"https://securetoken.google.com/to-do-list-artur","name":"Artur Diniz","picture":"https://lh3.googleusercontent.com/a/ACg8ocLA2Q6ZufixICd6pmX4rO03gTgW-xSKtpjSEPpKcfs5Fmu_NsxluQ=s96-c","sub":"tuP29PTczmOizLSRnGE4r849dpj2","user_id":"tuP29PTczmOizLSRnGE4r849dpj2"}}
+
+Variables Set: [email id]
+Errors: [message:"violates SQL unique constraint: usuario_pkey"  path:{values:{string_value:"usuario_insert"}}  extensions:{code:ALREADY_EXISTS  debug_details:"PostgreSQL runtime error (err_code: 23505): pq: duplicate key value violates unique constraint \"usuario_pkey\"\nWITH \"usuario_insert_temp\" AS (INSERT INTO \"public\".\"usuario\" (\"email\",\"id\",\"data_cadastro\") VALUES ( $1 ::text, $2 ::text, $3 ::date) RETURNING jsonb_build_object('id', \"id\") AS j) SELECT * FROM \"usuario_insert_temp\"\nParams: [arturdlmeira@gmail.com tuP29PTczmOizLSRnGE4r849dpj2 2026-06-01]"}]
+Data Fields: [usuario_insert]
+sources: connector\queries.gql [885B] connector\mutations.gql [1817B] 
+I0601 18:43:28.782324   25376 execute.go:57] Database ping is quick (likely cached), took 536.3µs
+I0601 18:43:28.783493   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 4c24] ExecuteQuery query BuscarContasBancarias: succeeded. Connector: default
+I0601 18:43:28.784009   25376 execute.go:57] Database ping is quick (likely cached), took 516.1µs
+I0601 18:43:28.784874   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 4c24] ExecuteQuery query BuscarCategorias: succeeded. Connector: default
+I0601 18:43:28.784874   25376 execute.go:57] Database ping is quick (likely cached), took 0s
+I0601 18:43:28.786992   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 4c24] ExecuteQuery query BuscarDespesas: succeeded. Connector: default
+I0601 18:48:18.422260   25376 execute.go:57] Database ping is quick (likely cached), took 834.7µs
+W0601 18:48:18.423817   25376 engine.go:213] [projects/emulator/locations/emulator/services/despesa 4c24] ExecuteMutation mutation CriarUsuario: failed. Connector: default
+Auth: user of {"UID":"tuP29PTczmOizLSRnGE4r849dpj2","Token":{"aud":"to-do-list-artur","auth_time":1780342365,"email":"arturdlmeira@gmail.com","email_verified":true,"exp":1780352250,"firebase":{"identities":{"email":["arturdlmeira@gmail.com"],"google.com":["103614178496860493664"]},"sign_in_provider":"google.com"},"iat":1780348650,"iss":"https://securetoken.google.com/to-do-list-artur","name":"Artur Diniz","picture":"https://lh3.googleusercontent.com/a/ACg8ocLA2Q6ZufixICd6pmX4rO03gTgW-xSKtpjSEPpKcfs5Fmu_NsxluQ=s96-c","sub":"tuP29PTczmOizLSRnGE4r849dpj2","user_id":"tuP29PTczmOizLSRnGE4r849dpj2"}}
+
+Variables Set: [email id]
+Errors: [message:"violates SQL unique constraint: usuario_pkey"  path:{values:{string_value:"usuario_insert"}}  extensions:{code:ALREADY_EXISTS  debug_details:"PostgreSQL runtime error (err_code: 23505): pq: duplicate key value violates unique constraint \"usuario_pkey\"\nWITH \"usuario_insert_temp\" AS (INSERT INTO \"public\".\"usuario\" (\"email\",\"id\",\"data_cadastro\") VALUES ( $1 ::text, $2 ::text, $3 ::date) RETURNING jsonb_build_object('id', \"id\") AS j) SELECT * FROM \"usuario_insert_temp\"\nParams: [arturdlmeira@gmail.com tuP29PTczmOizLSRnGE4r849dpj2 2026-06-01]"}]
+Data Fields: [usuario_insert]
+sources: connector\mutations.gql [1817B] connector\queries.gql [885B] 
+I0601 18:48:18.428264   25376 execute.go:57] Database ping is quick (likely cached), took 514.8µs
+I0601 18:48:18.429931   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 4c24] ExecuteQuery query BuscarContasBancarias: succeeded. Connector: default
+I0601 18:48:18.429931   25376 execute.go:57] Database ping is quick (likely cached), took 0s
+I0601 18:48:18.430662   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 4c24] ExecuteQuery query BuscarCategorias: succeeded. Connector: default
+I0601 18:48:18.431730   25376 execute.go:57] Database ping is quick (likely cached), took 539.2µs
+I0601 18:48:18.432819   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 4c24] ExecuteQuery query BuscarDespesas: succeeded. Connector: default
+I0601 18:48:54.603444   25376 execute.go:57] Database ping is quick (likely cached), took 754.7µs
+I0601 18:48:54.606453   25376 execute.go:57] Database ping is quick (likely cached), took 751.2µs
+I0601 18:48:54.606989   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 4c24] ExecuteMutation mutation ExcluirDespesa: succeeded. Connector: default
+I0601 18:49:05.698593   25376 execute.go:57] Database ping is quick (likely cached), took 863.1µs
+I0601 18:49:05.700133   25376 execute.go:57] Database ping is quick (likely cached), took 525.6µs
+I0601 18:49:05.701188   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 4c24] ExecuteMutation mutation ExcluirDespesa: succeeded. Connector: default
+I0601 18:49:13.270011   25376 execute.go:57] Database ping is quick (likely cached), took 510.3µs
+I0601 18:49:13.271772   25376 execute.go:57] Database ping is quick (likely cached), took 0s
+I0601 18:49:13.272843   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 4c24] ExecuteMutation mutation ExcluirDespesa: succeeded. Connector: default
+I0601 18:54:33.624492   25376 execute.go:57] Database ping is quick (likely cached), took 526.4µs
+W0601 18:54:33.626649   25376 engine.go:213] [projects/emulator/locations/emulator/services/despesa 4c24] ExecuteMutation mutation CriarUsuario: failed. Connector: default
+Auth: user of {"UID":"tuP29PTczmOizLSRnGE4r849dpj2","Token":{"aud":"to-do-list-artur","auth_time":1780342365,"email":"arturdlmeira@gmail.com","email_verified":true,"exp":1780352250,"firebase":{"identities":{"email":["arturdlmeira@gmail.com"],"google.com":["103614178496860493664"]},"sign_in_provider":"google.com"},"iat":1780348650,"iss":"https://securetoken.google.com/to-do-list-artur","name":"Artur Diniz","picture":"https://lh3.googleusercontent.com/a/ACg8ocLA2Q6ZufixICd6pmX4rO03gTgW-xSKtpjSEPpKcfs5Fmu_NsxluQ=s96-c","sub":"tuP29PTczmOizLSRnGE4r849dpj2","user_id":"tuP29PTczmOizLSRnGE4r849dpj2"}}
+
+Variables Set: [email id]
+Errors: [message:"violates SQL unique constraint: usuario_pkey"  path:{values:{string_value:"usuario_insert"}}  extensions:{code:ALREADY_EXISTS  debug_details:"PostgreSQL runtime error (err_code: 23505): pq: duplicate key value violates unique constraint \"usuario_pkey\"\nWITH \"usuario_insert_temp\" AS (INSERT INTO \"public\".\"usuario\" (\"email\",\"id\",\"data_cadastro\") VALUES ( $1 ::text, $2 ::text, $3 ::date) RETURNING jsonb_build_object('id', \"id\") AS j) SELECT * FROM \"usuario_insert_temp\"\nParams: [arturdlmeira@gmail.com tuP29PTczmOizLSRnGE4r849dpj2 2026-06-01]"}]
+Data Fields: [usuario_insert]
+sources: connector\mutations.gql [1817B] connector\queries.gql [885B] 
+I0601 18:54:33.627153   25376 execute.go:57] Database ping is quick (likely cached), took 503.8µs
+I0601 18:54:33.628302   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 4c24] ExecuteQuery query BuscarContasBancarias: succeeded. Connector: default
+I0601 18:54:33.628937   25376 execute.go:57] Database ping is quick (likely cached), took 635.6µs
+I0601 18:54:33.629806   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 4c24] ExecuteQuery query BuscarCategorias: succeeded. Connector: default
+I0601 18:54:33.629806   25376 execute.go:57] Database ping is quick (likely cached), took 0s
+I0601 18:54:33.631057   25376 engine.go:209] [projects/emulator/locations/emulator/services/despesa 4c24] ExecuteQuery query BuscarDespesas: succeeded. Connector: default

@@ -1,0 +1,460 @@
+extend type Mutation {
+  """
+  ✨ Insert a single `Categoria` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  categoria_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: Categoria_Data!
+  ): Categoria_KeyOutput! @fdc_generated(from: "Categoria", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `ContaBancaria` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  contaBancaria_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: ContaBancaria_Data!
+  ): ContaBancaria_KeyOutput! @fdc_generated(from: "ContaBancaria", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `Despesa` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  despesa_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: Despesa_Data!
+  ): Despesa_KeyOutput! @fdc_generated(from: "Despesa", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `Usuario` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  usuario_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: Usuario_Data!
+  ): Usuario_KeyOutput! @fdc_generated(from: "Usuario", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert `Categoria` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  categoria_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [Categoria_Data!]!
+  ): [Categoria_KeyOutput!]! @fdc_generated(from: "Categoria", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `ContaBancaria` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  contaBancaria_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [ContaBancaria_Data!]!
+  ): [ContaBancaria_KeyOutput!]! @fdc_generated(from: "ContaBancaria", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `Despesa` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  despesa_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [Despesa_Data!]!
+  ): [Despesa_KeyOutput!]! @fdc_generated(from: "Despesa", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `Usuario` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  usuario_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [Usuario_Data!]!
+  ): [Usuario_KeyOutput!]! @fdc_generated(from: "Usuario", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert or update a single `Categoria` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Categoria`.
+  """
+  categoria_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: Categoria_Data!
+  ): Categoria_KeyOutput! @fdc_generated(from: "Categoria", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `ContaBancaria` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `ContaBancaria`.
+  """
+  contaBancaria_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: ContaBancaria_Data!
+  ): ContaBancaria_KeyOutput! @fdc_generated(from: "ContaBancaria", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `Despesa` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Despesa`.
+  """
+  despesa_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: Despesa_Data!
+  ): Despesa_KeyOutput! @fdc_generated(from: "Despesa", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `Usuario` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Usuario`.
+  """
+  usuario_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: Usuario_Data!
+  ): Usuario_KeyOutput! @fdc_generated(from: "Usuario", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update `Categoria` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Categoria`.
+  """
+  categoria_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [Categoria_Data!]!
+  ): [Categoria_KeyOutput!]! @fdc_generated(from: "Categoria", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `ContaBancaria` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `ContaBancaria`.
+  """
+  contaBancaria_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [ContaBancaria_Data!]!
+  ): [ContaBancaria_KeyOutput!]! @fdc_generated(from: "ContaBancaria", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `Despesa` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Despesa`.
+  """
+  despesa_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [Despesa_Data!]!
+  ): [Despesa_KeyOutput!]! @fdc_generated(from: "Despesa", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `Usuario` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Usuario`.
+  """
+  usuario_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [Usuario_Data!]!
+  ): [Usuario_KeyOutput!]! @fdc_generated(from: "Usuario", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Update a single `Categoria` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `Categoria` or `null` if not found.
+  """
+  categoria_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Categoria_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Categoria_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: Categoria_Data!
+  ): Categoria_KeyOutput @fdc_generated(from: "Categoria", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `ContaBancaria` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `ContaBancaria` or `null` if not found.
+  """
+  contaBancaria_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: ContaBancaria_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: ContaBancaria_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: ContaBancaria_Data!
+  ): ContaBancaria_KeyOutput @fdc_generated(from: "ContaBancaria", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `Despesa` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `Despesa` or `null` if not found.
+  """
+  despesa_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Despesa_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Despesa_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: Despesa_Data!
+  ): Despesa_KeyOutput @fdc_generated(from: "Despesa", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `Usuario` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `Usuario` or `null` if not found.
+  """
+  usuario_update(
+    """
+    The unique ID of the object.
+    """
+    id: String
+
+    """
+    ✨ `_expr` server value variant of `id` (The unique ID of the object.)
+    """
+    id_expr: String_Expr
+
+    """
+    The key used to identify the object.
+    """
+    key: Usuario_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Usuario_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: Usuario_Data!
+  ): Usuario_KeyOutput @fdc_generated(from: "Usuario", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update `Categoria` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  categoria_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: Categoria_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: Categoria_Data!
+  ): Int! @fdc_generated(from: "Categoria", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `ContaBancaria` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  contaBancaria_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: ContaBancaria_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: ContaBancaria_Data!
+  ): Int! @fdc_generated(from: "ContaBancaria", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `Despesa` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  despesa_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: Despesa_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: Despesa_Data!
+  ): Int! @fdc_generated(from: "Despesa", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `Usuario` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  usuario_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: Usuario_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: Usuario_Data!
+  ): Int! @fdc_generated(from: "Usuario", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Delete a single `Categoria` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  categoria_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Categoria_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Categoria_FirstRow
+  ): Categoria_KeyOutput @fdc_generated(from: "Categoria", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `ContaBancaria` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  contaBancaria_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: ContaBancaria_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: ContaBancaria_FirstRow
+  ): ContaBancaria_KeyOutput @fdc_generated(from: "ContaBancaria", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `Despesa` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  despesa_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Despesa_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Despesa_FirstRow
+  ): Despesa_KeyOutput @fdc_generated(from: "Despesa", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `Usuario` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  usuario_delete(
+    """
+    The unique ID of the object.
+    """
+    id: String
+
+    """
+    ✨ `_expr` server value variant of `id` (The unique ID of the object.)
+    """
+    id_expr: String_Expr
+
+    """
+    The key used to identify the object.
+    """
+    key: Usuario_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Usuario_FirstRow
+  ): Usuario_KeyOutput @fdc_generated(from: "Usuario", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete `Categoria` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  categoria_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: Categoria_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "Categoria", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `ContaBancaria` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  contaBancaria_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: ContaBancaria_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "ContaBancaria", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `Despesa` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  despesa_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: Despesa_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "Despesa", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `Usuario` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  usuario_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: Usuario_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "Usuario", purpose: DELETE_MULTIPLE)
+}

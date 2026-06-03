@@ -1,0 +1,33 @@
+# Tabela de Usuários (Vinculada ao Firebase Auth)
+type Usuario @table {
+  id: String! @col(name: "id") # UID do Firebase
+  email: String! @unique
+  dataCadastro: Date! @default(expr: "request.time")
+}
+
+# Tabela de Categorias
+type Categoria @table {
+  id: UUID! @default(expr: "uuidV4()")
+  nomeCategoria: String!
+}
+
+# Tabela de Contas Bancárias
+type ContaBancaria @table {
+  id: UUID! @default(expr: "uuidV4()")
+  usuario: Usuario! # O Firebase cria a Foreign Key automaticamente!
+  nomeBanco: String!
+  saldo: Float! @default(value: 0.0)
+  criadoEm: Date! @default(expr: "request.time")
+}
+
+# Tabela de Despesas (Agora 100% no PostgreSQL)
+type Despesa @table {
+  id: UUID! @default(expr: "uuidV4()")
+  usuario: Usuario!
+  contaBancaria: ContaBancaria!
+  categoria: Categoria!
+  descricao: String!
+  valor: Float!
+  tipo: String! @default(value: "despesa")
+  dataDespesa: Date! @default(expr: "request.time")
+}

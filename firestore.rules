@@ -1,0 +1,16 @@
+rules_version='2'
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Regras específicas para a coleção de despesas
+    match /despesas/{despesaId} {
+      // Permite que o usuário leia apenas os documentos onde o 'userId' for igual ao UID dele no Firebase Auth
+      allow read: if request.auth != null && resource.data.userId == request.auth.uid;
+      
+      // Bloqueia a escrita pelo front-end. 
+      // A criação de despesas será feita exclusivamente pela nossa API Node.js (Admin SDK), que ignora essa restrição.
+      allow write: if false;
+    }
+  }
+}
